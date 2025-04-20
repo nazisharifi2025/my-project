@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>کاونتر با دکمه</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #counter {
+      font-size: 48px;
+      color: #28a745;
+      margin: 20px;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laborum obcaecati consequuntur quas. Odio quis quas quibusdam et, fugiat temporibus ab soluta eum commodi quos, dolorum qui, facere maxime? Praesentium!s</p>
+
+  <div id="counter">0</div>
+  <button onclick="startCounter()">شروع شمارش</button>
+
+  <script>
+    function startCounter() {
+      const start = 0;
+      const end = 100;
+      const duration = 5000; // به میلی‌ثانیه
+      const steps = 100;
+
+      const counterElement = document.getElementById("counter");
+      let current = start;
+      const range = end - start;
+      const step = range / steps;
+      const stepTime = duration / steps;
+
+      // اگر شمارش قبلاً شروع شده باشه، اونو متوقف کنیم
+      if (window.counterInterval) {
+        clearInterval(window.counterInterval);
+      }
+
+      window.counterInterval = setInterval(() => {
+        current += step;
+        if (current >= end) {
+          current = end;
+          clearInterval(window.counterInterval);
+        }
+        counterElement.textContent = Math.round(current);
+      }, stepTime);
+    }
+  </script>
+
 </body>
 </html>
