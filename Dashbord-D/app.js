@@ -1,7 +1,7 @@
 
 // تنظیمات:
-const start = 300;
-const end = 560;
+const start = 1;
+const end = 27;
 const duration = 5000; // به میلی‌ثانیه (5 ثانیه)
 const counterElement = document.getElementById("counter");
 const range = end - start;
