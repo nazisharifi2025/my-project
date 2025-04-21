@@ -1,40 +1,80 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dark Mode Test</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dark Mode Toggle</title>
+
+    <!-- Tailwind config برای فعال‌سازی دارک مود -->
     <script>
       tailwind.config = {
         darkMode: 'class',
-      };
-    </script>
-    <style>
-      .transition-all {
-        transition: all 0.3s ease-in-out;
       }
-    </style>
+    </script>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- آیکون‌های متریال -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-white dark:bg-gray-900 text-black dark:text-white h-screen flex items-center justify-center transition-all">
 
-    <button id="themeToggle" class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md">
-      Toggle Theme
-    </button>
+  <body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-500">
 
+    <!-- دکمه‌ی تغییر تم -->
+    <div class="flex justify-center mt-10">
+      <button
+        id="themeToggle"
+        class="p-3 rounded-md bg-gray-200 dark:bg-gray-700 shadow-md flex items-center space-x-2"
+      >
+        <span class="material-symbols-outlined" id="moonIcon">nightlight</span>
+        <span class="material-symbols-outlined hidden" id="sunIcon">sunny</span>
+        <span>Toggle Theme</span>
+      </button>
+    </div>
+
+    <!-- محتوای تست -->
+    <div class="text-center mt-10">
+      <h1 class="text-3xl font-bold">Welcome to Dark Mode Demo</h1>
+      <p class="mt-4">Click the button above to toggle between light and dark mode.</p>
+    </div>
+
+    <!-- جاوااسکریپت -->
     <script>
-      const toggleBtn = document.getElementById('themeToggle');
+      const themeToggle = document.getElementById("themeToggle");
+      const sunIcon = document.getElementById("sunIcon");
+      const moonIcon = document.getElementById("moonIcon");
       const html = document.documentElement;
 
-      // Load saved theme
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        html.classList.add('dark');
+      // تابع تغییر آیکون‌ها
+      function updateIcons(isDark) {
+        if (isDark) {
+          sunIcon.classList.remove("hidden");
+          moonIcon.classList.add("hidden");
+        } else {
+          sunIcon.classList.add("hidden");
+          moonIcon.classList.remove("hidden");
+        }
       }
 
-      toggleBtn.addEventListener('click', () => {
-        const isDark = html.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      // لود اولیه
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        html.classList.add("dark");
+        updateIcons(true);
+      } else {
+        html.classList.remove("dark");
+        updateIcons(false);
+      }
+
+      // کلیک روی دکمه
+      themeToggle.addEventListener("click", () => {
+        const isDark = html.classList.toggle("dark");
+        updateIcons(isDark);
+        localStorage.setItem("theme", isDark ? "dark" : "light");
       });
     </script>
   </body>
