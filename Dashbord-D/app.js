@@ -40,7 +40,7 @@
   }, stepTime2);
 // counter3
 const starte = 0;
-const ende = 8;
+const ende = 5;
 const duratione = 2000;
 const counterElement3 = document.getElementById("counter3");
 const rangee = ende - starte;
@@ -56,3 +56,39 @@ const timer3 = setInterval(() => {
   }
   counterElement3.textContent = Math.round(current3);
 }, stepTime3);
+// counter4
+const start4 = 0;
+const end4 = 8;
+const duration4 = 2000;
+const counterElement4 = document.getElementById("counter4");
+const range4 = end4 - start4;
+const steps4 = 100;
+const stepTime4 = duration4 / steps3;
+let current4 = start4;
+const step4 = range4 / steps3;
+const timer4 = setInterval(() => {
+  current4 += step4;
+  if (current4 >= end4) {
+    current4 = end4;
+    clearInterval(timer4);
+  }
+  counterElement4.textContent = Math.round(current4);
+}, stepTime4);
+// counter5
+const start5 = 19890;
+const end5 =24000;
+const duration5 = 1000;
+const counterElement5 = document.getElementById("counter5");
+const range5 = end5 - start5;
+const steps5 = 100;
+const stepTime5 = duration5 / steps5;
+let current5 = start5;
+const step5 = range5 / steps5;
+const timer5 = setInterval(() => {
+  current5 += step5;
+  if (current5 >= end5) {
+    current5 = end5;
+    clearInterval(timer5);
+  }
+  counterElement5.textContent = Math.round(current5);
+}, stepTime5);
