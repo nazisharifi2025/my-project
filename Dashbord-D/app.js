@@ -108,11 +108,11 @@ const html = document.documentElement;
 // تابع برای تنظیم آیکون‌ها
 function updateIcons(isDark) {
   if (isDark) {
-    sunIcon.classList.remove("opacity-0");
-    moonIcon.classList.add("opacity-0");
+    sunIcon.classList.remove("hidden");
+    moonIcon.classList.add("hidden");
   } else {
-    sunIcon.classList.add("opacity-0");
-    moonIcon.classList.remove("opacity-0");
+    sunIcon.classList.add("hidden");
+    moonIcon.classList.remove("hidden");
   }
 }
 

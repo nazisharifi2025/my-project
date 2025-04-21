@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+    <style>
+      .transition-all {
+        transition: all 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-gray-900 text-black dark:text-white h-screen flex items-center justify-center transition-all">
+
+    <button id="themeToggle" class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md">
+      Toggle Theme
+    </button>
+
+    <script>
+      const toggleBtn = document.getElementById('themeToggle');
+      const html = document.documentElement;
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        html.classList.add('dark');
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        const isDark = html.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    </script>
+  </body>
+</html>
