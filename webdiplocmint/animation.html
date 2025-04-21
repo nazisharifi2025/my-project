@@ -2,83 +2,61 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>پاپ‌آپ با تایمر</title>
+  <title>عکس با انیمیشن اسکرول</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
       direction: rtl;
       font-family: sans-serif;
     }
+
+    .hidden-anim {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.8s ease-in-out;
+    }
+
+    .show-anim {
+      opacity: 1;
+      transform: scale(1);
+    }
   </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100">
 
-  <!-- دکمه نمایش پاپ‌آپ -->
-  <button id="showPopup" class="px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
-    نمایش پاپ‌آپ با تایمر ⏳
-  </button>
-
-  <!-- پس‌زمینه تار -->
-  <div id="overlay" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 hidden"></div>
-
-  <!-- پاپ‌آپ -->
-  <div id="popup" class="fixed top-1/2 left-1/2 w-96 max-w-full p-6 bg-white rounded-xl shadow-2xl transform -translate-x-1/2 -translate-y-1/2 scale-90 opacity-0 z-50 transition-all duration-500 pointer-events-none">
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-xl font-bold text-gray-800">این یه پاپ‌آپه ⏰</h2>
-      <button id="closePopup" class="text-gray-500 hover:text-red-500 text-sm px-2 py-1 border border-gray-300 rounded" disabled>
-        بستن در <span id="countdown">5</span> ثانیه
-      </button>
-    </div>
-    <p class="text-gray-600">این پاپ‌آپ بعد از ۵ ثانیه به صورت خودکار بسته می‌شه. می‌تونی زودتر هم ببندیش 😉</p>
+  <div class="h-screen flex items-center justify-center">
+    <h1 class="text-4xl font-bold text-gray-700">اسکرول کن پایین 👇</h1>
   </div>
 
+  <div class="flex justify-center my-20">
+    <img
+      id="animatedImage"
+      src="../Dashbord-D/img/counter__2.png"
+      alt="تصویر با انیمیشن"
+      class="rounded-xl shadow-xl hidden-anim"
+    />
+  </div>
+
+  <div class="h-screen"></div>
+
   <script>
-    const showBtn = document.getElementById('showPopup');
-    const closeBtn = document.getElementById('closePopup');
-    const popup = document.getElementById('popup');
-    const overlay = document.getElementById('overlay');
-    const countdownEl = document.getElementById('countdown');
+    const image = document.getElementById('animatedImage');
 
-    let timer;
-    let countdown;
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            image.classList.add('show-anim');
+            observer.unobserve(image); // فقط یکبار انیمیشن اجرا بشه
+          }
+        });
+      },
+      {
+        threshold: 0.5 // وقتی ۵۰٪ از عکس داخل صفحه باشه، فعال میشه
+      }
+    );
 
-    function openPopup() {
-      overlay.classList.remove('hidden');
-      popup.classList.remove('opacity-0', 'scale-90', 'pointer-events-none');
-      popup.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
-
-      // شروع شمارش معکوس
-      let seconds = 5;
-      countdownEl.textContent = seconds;
-      closeBtn.disabled = true;
-
-      countdown = setInterval(() => {
-        seconds--;
-        countdownEl.textContent = seconds;
-        if (seconds <= 0) {
-          closePopup();
-        }
-      }, 1000);
-
-      // بعد از ۵ ثانیه ببند
-      timer = setTimeout(() => {
-        closePopup();
-      }, 5000);
-    }
-
-    function closePopup() {
-      clearTimeout(timer);
-      clearInterval(countdown);
-      popup.classList.add('opacity-0', 'scale-90', 'pointer-events-none');
-      popup.classList.remove('opacity-100', 'scale-100');
-      setTimeout(() => {
-        overlay.classList.add('hidden');
-      }, 300);
-    }
-
-    showBtn.addEventListener('click', openPopup);
-    closeBtn.addEventListener('click', closePopup);
-    overlay.addEventListener('click', closePopup);
+    observer.observe(image);
   </script>
 
 </body>
