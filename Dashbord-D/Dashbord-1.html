@@ -34,7 +34,7 @@
               stat_minus_1
             </span>
             <div class="hidden group-hover:block">
-            <ul class="bg-navar1 w-[600px] absolute top-14 h-32 justify-between items-center px-2 flex gap-3 ">
+            <ul class="bg-navar1 w-[1000px] -ml-48 absolute top-14 h-32 justify-between items-center px-2 flex gap-3 ">
               <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-butten  shadow text-center shadow-gray-100">Light</li>
               <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-butten shadow text-center shadow-gray-100">Dark</li>
             </ul>
@@ -151,7 +151,7 @@
           </div>
           </div>
         </li>
-          <li>
+          <li  class="relative group">
             <a href="">Dashboard </a>
             <span
               class="material-symbols-outlined mt-1"
@@ -159,13 +159,19 @@
             >
               stat_minus_1
             </span>
-            <ul class="h-56 text-center w-24 bg-navar1 absolute top-32 ">
-              <li class="-mt-8">Admin</li>
-              <li>Admin</li>
-              <li>Admin</li>
+            <ul class="h-56 w-52 bg-navar1 absolute top-20 hidden group-hover:block">
+              <li class="-mt-6 flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-butten">Admin <span class="material-symbols-outlined mt-6">
+                chevron_right
+                </span></li>
+              <li class=" flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-butten">Anistractor<span class="material-symbols-outlined mt-6">
+                chevron_right
+                </span></li>
+              <li class=" flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-butten">Student<span class="material-symbols-outlined mt-6">
+                chevron_right
+                </span></li>
             </ul>
           </li>
-          <li>
+          <li class="relative group">
             <a href=""
               >eCommerce
               <span
@@ -174,6 +180,14 @@
               >
                 stat_minus_1
               </span>
+              <ul class="h-60 w-52 bg-navar1 absolute top-20 hidden group-hover:block">
+                <li class="-mt-6 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Shop</li>
+                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Prouduct Detaiel</li>
+                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Cart</li>
+                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Checkout</li>
+                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Wishlist</li>
+
+              </ul>
             </a>
           </li>
         </ul>
