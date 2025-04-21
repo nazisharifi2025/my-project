@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <title>معرفی کسب‌وکار</title>
+  <meta charset="UTF-8">
+  <title>پنل کاری ساده</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-8">
 
-  <div class="bg-white shadow-xl rounded-xl max-w-md w-full text-center p-8 space-y-6">
-    <img src="https://via.placeholder.com/100" alt="لوگو یا عکس" class="mx-auto rounded-full w-24 h-24">
-    <h1 class="text-2xl font-bold text-gray-800">نام کسب‌وکار شما</h1>
-    <p class="text-gray-600">ما خدماتی با کیفیت و سریع ارائه می‌دهیم در زمینه <span class="font-medium text-purple-600">[صنعت شما]</span>.</p>
-    
-    <div class="space-y-2">
-      <p class="text-sm text-gray-500">تماس بگیرید:</p>
-      <p class="text-lg text-gray-800 font-semibold">0912-123-4567</p>
-      <p class="text-sm text-gray-500">آدرس: تهران، خیابان مثال، پلاک 10</p>
-    </div>
+  <div class="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">مدیریت خدمات</h2>
 
-    <button 
-      onclick="alert('با ما تماس بگیرید!')" 
-      class="mt-4 px-6 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition">
-      درخواست تماس
-    </button>
+    <form id="taskForm" class="flex gap-2 mb-4">
+      <input type="text" id="taskInput" class="flex-1 border rounded px-3 py-2" placeholder="نام خدمت جدید" required>
+      <button type="submit" class="bg-blue-600 text-white px-4 rounded hover:bg-blue-700">افزودن</button>
+    </form>
+
+    <ul id="taskList" class="space-y-2">
+      <!-- موارد خدمات اینجا اضافه می‌شن -->
+    </ul>
   </div>
 
+  <script>
+    const taskForm = document.getElementById("taskForm");
+    const taskInput = document.getElementById("taskInput");
+    const taskList = document.getElementById("taskList");
+
+    taskForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const taskText = taskInput.value.trim();
+      if (taskText === "") return;
+
+      const li = document.createElement("li");
+      li.className = "flex justify-between items-center bg-gray-50 p-2 rounded border";
+
+      const span = document.createElement("span");
+      span.textContent = taskText;
+
+      const delBtn = document.createElement("button");
+      delBtn.textContent = "❌";
+      delBtn.className = "text-red-500 hover:text-red-700";
+      delBtn.onclick = () => li.remove();
+
+      li.appendChild(span);
+      li.appendChild(delBtn);
+      taskList.appendChild(li);
+
+      taskInput.value = "";
+    });
+  </script>
 </body>
 </html>
