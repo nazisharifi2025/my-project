@@ -92,3 +92,10 @@ const timer5 = setInterval(() => {
   }
   counterElement5.textContent = Math.round(current5);
 }, stepTime5);
+// darck mode
+// const html = document.getElementsByTagName("body");
+// const toggelbtn =document.getElementById("toggelbtn");
+// toggelbtn.addEventListener("click", ()=>{
+  // const darck = html.classList.toggle("dark");
+  // savedTheme== "dark"? "dark":"light";
+// })
