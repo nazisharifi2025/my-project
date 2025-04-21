@@ -2,32 +2,57 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>باکس انیمیشنی</title>
+  <title>پاپ‌آپ انیمیشنی زیبا</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      direction: rtl;
+      font-family: sans-serif;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-  <button id="toggleBtn" class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
-    نمایش / مخفی کردن باکس
+  <!-- دکمه نمایش پاپ‌آپ -->
+  <button id="showPopup" class="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition">
+    نمایش پاپ‌آپ ✨
   </button>
 
-  <div id="box" class="mt-8 w-80 p-6 bg-white shadow-lg rounded-lg opacity-0 scale-95 transform transition-all duration-500 pointer-events-none">
-    <h2 class="text-xl font-bold text-gray-800 mb-2">سلام دوست من! 👋</h2>
-    <p class="text-gray-600">این یک باکس انیمیشنی هست که با Tailwind ساخته شده و با جاوااسکریپت کنترل می‌شه.</p>
+  <!-- پس‌زمینه تار -->
+  <div id="overlay" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 hidden"></div>
+
+  <!-- پاپ‌آپ -->
+  <div id="popup" class="fixed top-1/2 left-1/2 w-96 max-w-full p-6 bg-white rounded-xl shadow-2xl transform -translate-x-1/2 -translate-y-1/2 scale-90 opacity-0 z-50 transition-all duration-500 pointer-events-none">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-bold text-gray-800">به پاپ‌آپ خوش اومدی! 🎉</h2>
+      <button id="closePopup" class="text-gray-500 hover:text-red-500 text-xl">&times;</button>
+    </div>
+    <p class="text-gray-600">این یه پاپ‌آپ انیمیشنی با تاخیر، افکت محو شدن، و طراحی زیباست. با Tailwind و JavaScript ساخته شده.</p>
   </div>
 
   <script>
-    const toggleBtn = document.getElementById("toggleBtn");
-    const box = document.getElementById("box");
+    const showBtn = document.getElementById('showPopup');
+    const closeBtn = document.getElementById('closePopup');
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
 
-    toggleBtn.addEventListener("click", () => {
-      if (box.classList.contains("opacity-0")) {
-        box.classList.remove("opacity-0", "scale-95", "pointer-events-none");
-        box.classList.add("opacity-100", "scale-100", "pointer-events-auto");
-      } else {
-        box.classList.add("opacity-0", "scale-95", "pointer-events-none");
-        box.classList.remove("opacity-100", "scale-100", "pointer-events-auto");
-      }
+    showBtn.addEventListener('click', () => {
+      overlay.classList.remove('hidden');
+      popup.classList.remove('opacity-0', 'scale-90', 'pointer-events-none');
+      popup.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popup.classList.add('opacity-0', 'scale-90', 'pointer-events-none');
+      popup.classList.remove('opacity-100', 'scale-100');
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+      }, 300); // تأخیر تا انیمیشن کامل بشه
+    });
+
+    // بستن با کلیک روی پس‌زمینه
+    overlay.addEventListener('click', () => {
+      closeBtn.click();
     });
   </script>
 
