@@ -2,61 +2,37 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>عکس با انیمیشن اسکرول</title>
+  <title>دارک مود / لایت مود</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config to enable 'class' dark mode
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
   <style>
     body {
       direction: rtl;
       font-family: sans-serif;
     }
-
-    .hidden-anim {
-      opacity: 0;
-      transform: scale(0.9);
-      transition: all 0.8s ease-in-out;
-    }
-
-    .show-anim {
-      opacity: 1;
-      transform: scale(1);
-    }
   </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-500">
 
-  <div class="h-screen flex items-center justify-center">
-    <h1 class="text-4xl font-bold text-gray-700">اسکرول کن پایین 👇</h1>
+  <div class="min-h-screen flex flex-col items-center justify-center">
+    <!-- آیکون حالت -->
+    <button id="themeToggle" class="mb-6 text-3xl focus:outline-none">
+      <span id="sunIcon" class="hidden">🌞</span>
+      <span id="moonIcon">🌙</span>
+    </button>
+
+    <!-- محتوا -->
+    <h1 class="text-4xl font-bold">سلام! این حالت دارک/لایت داره 🌗</h1>
+    <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">با کلیک روی آیکون بالا می‌تونی بین حالت‌ها جابه‌جا بشی.</p>
   </div>
-
-  <div class="flex justify-center my-20">
-    <img
-      id="animatedImage"
-      src="../Dashbord-D/img/counter__2.png"
-      alt="تصویر با انیمیشن"
-      class="rounded-xl shadow-xl hidden-anim"
-    />
-  </div>
-
-  <div class="h-screen"></div>
 
   <script>
-    const image = document.getElementById('animatedImage');
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            image.classList.add('show-anim');
-            observer.unobserve(image); // فقط یکبار انیمیشن اجرا بشه
-          }
-        });
-      },
-      {
-        threshold: 0.5 // وقتی ۵۰٪ از عکس داخل صفحه باشه، فعال میشه
-      }
-    );
-
-    observer.observe(image);
+   
   </script>
 
 </body>
