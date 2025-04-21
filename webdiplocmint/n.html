@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Card</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+    <img class="w-full" src="https://via.placeholder.com/400x200" alt="Product Image">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">Product Title</div>
+      <p class="text-gray-700 text-base">
+        This is a sample description of the product. It's simple and responsive.
+      </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+      <button 
+        onclick="addToCart()" 
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function addToCart() {
+      alert("Product added to cart!");
+    }
+  </script>
+
+</body>
+</html>
