@@ -1,5 +1,5 @@
 
-  // تنظیمات counter1:
+  // counter1
   const start = 0.2;
   const end = 2;
   const duration = 3000; // 5 ثانیه
@@ -19,7 +19,7 @@
     counterElement.textContent = Math.round(current);
   }, stepTime);
 
-  // تنظیمات counter2:
+  //counter2:
   const starts = 1;
   const ends = 5;
   const durations = 2000;
