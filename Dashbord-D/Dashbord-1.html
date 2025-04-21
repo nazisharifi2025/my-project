@@ -10,13 +10,19 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <script>
+      // Tailwind config to enable 'class' dark mode
+      tailwind.config = {
+        darkMode: 'class'
+      };
+    </script>
   </head>
-  <body class="bg-nav1 w-full text-white dark:bg-gray-900 dark:text-white transition-colors duration-500">
-    <button id="themeToggle" class=" h-16 w-16 bg-vNav shadow-2xl shadow-gray-400 rounded-lg absolute top-36 right-1">
+  <body class="bg-nav1 w-full text-white dark:bg-nav1 dark:text-white transition-colors duration-500">
+    <button id="themeToggle" class=" h-16 w-16 bg-vNav text-center rounded-r-none shadow-2xl shadow-gray-400 rounded-lg absolute top-36 right-0">
       <span class="material-symbols-outlined" id="moonIcon"  >
         nightlight
         </span>
-        <span class="material-symbols-outlined hidden" id="sunIcon">
+        <span class="material-symbols-outlined opacity-0" id="sunIcon">
           sunny
           </span>
     </button>
