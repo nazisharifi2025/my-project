@@ -463,6 +463,15 @@
   .-ml-56 {
     margin-left: calc(var(--spacing) * -56);
   }
+  .ml-1 {
+    margin-left: calc(var(--spacing) * 1);
+  }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+  .ml-3 {
+    margin-left: calc(var(--spacing) * 3);
+  }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
   }
@@ -534,6 +543,12 @@
   }
   .h-\[60vh\] {
     height: 60vh;
+  }
+  .h-\[70\%\] {
+    height: 70%;
+  }
+  .h-\[80\%\] {
+    height: 80%;
   }
   .h-\[80vh\] {
     height: 80vh;
@@ -939,8 +954,14 @@
   .pt-2 {
     padding-top: calc(var(--spacing) * 2);
   }
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
+  }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
   }
   .pr-3 {
     padding-right: calc(var(--spacing) * 3);
@@ -1051,8 +1072,14 @@
   .text-gray-500 {
     color: var(--color-gray-500);
   }
+  .text-gray-600 {
+    color: var(--color-gray-600);
+  }
   .text-gray-800 {
     color: var(--color-gray-800);
+  }
+  .text-green-700 {
+    color: var(--color-green-700);
   }
   .text-white {
     color: var(--color-white);
@@ -1116,6 +1143,55 @@
       }
     }
   }
+  .group-hover\:h-40 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        height: calc(var(--spacing) * 40);
+      }
+    }
+  }
+  .hover\:mx-auto {
+    &:hover {
+      @media (hover: hover) {
+        margin-inline: auto;
+      }
+    }
+  }
+  .hover\:mt-3 {
+    &:hover {
+      @media (hover: hover) {
+        margin-top: calc(var(--spacing) * 3);
+      }
+    }
+  }
+  .hover\:h-14 {
+    &:hover {
+      @media (hover: hover) {
+        height: calc(var(--spacing) * 14);
+      }
+    }
+  }
+  .hover\:h-40 {
+    &:hover {
+      @media (hover: hover) {
+        height: calc(var(--spacing) * 40);
+      }
+    }
+  }
+  .hover\:h-60 {
+    &:hover {
+      @media (hover: hover) {
+        height: calc(var(--spacing) * 60);
+      }
+    }
+  }
+  .hover\:w-\[80\%\] {
+    &:hover {
+      @media (hover: hover) {
+        width: 80%;
+      }
+    }
+  }
   .hover\:rounded-2xl {
     &:hover {
       @media (hover: hover) {
@@ -1128,6 +1204,14 @@
       @media (hover: hover) {
         border-style: var(--tw-border-style);
         border-width: 2px;
+      }
+    }
+  }
+  .hover\:border-4 {
+    &:hover {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 4px;
       }
     }
   }
@@ -1213,6 +1297,13 @@
       }
     }
   }
+  .hover\:pt-0 {
+    &:hover {
+      @media (hover: hover) {
+        padding-top: calc(var(--spacing) * 0);
+      }
+    }
+  }
   .hover\:pl-0 {
     &:hover {
       @media (hover: hover) {
@@ -1224,6 +1315,37 @@
     &:hover {
       @media (hover: hover) {
         padding-left: calc(var(--spacing) * 2);
+      }
+    }
+  }
+  .hover\:text-center {
+    &:hover {
+      @media (hover: hover) {
+        text-align: center;
+      }
+    }
+  }
+  .hover\:leading-14 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-leading: calc(var(--spacing) * 14);
+        line-height: calc(var(--spacing) * 14);
+      }
+    }
+  }
+  .hover\:leading-20 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-leading: calc(var(--spacing) * 20);
+        line-height: calc(var(--spacing) * 20);
+      }
+    }
+  }
+  .hover\:leading-\[80\%\] {
+    &:hover {
+      @media (hover: hover) {
+        --tw-leading: 80%;
+        line-height: 80%;
       }
     }
   }
