@@ -2,7 +2,7 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>پاپ‌آپ انیمیشنی زیبا</title>
+  <title>پاپ‌آپ با تایمر</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
@@ -14,8 +14,8 @@
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
   <!-- دکمه نمایش پاپ‌آپ -->
-  <button id="showPopup" class="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition">
-    نمایش پاپ‌آپ ✨
+  <button id="showPopup" class="px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+    نمایش پاپ‌آپ با تایمر ⏳
   </button>
 
   <!-- پس‌زمینه تار -->
@@ -24,10 +24,12 @@
   <!-- پاپ‌آپ -->
   <div id="popup" class="fixed top-1/2 left-1/2 w-96 max-w-full p-6 bg-white rounded-xl shadow-2xl transform -translate-x-1/2 -translate-y-1/2 scale-90 opacity-0 z-50 transition-all duration-500 pointer-events-none">
     <div class="flex justify-between items-center mb-4">
-      <h2 class="text-xl font-bold text-gray-800">به پاپ‌آپ خوش اومدی! 🎉</h2>
-      <button id="closePopup" class="text-gray-500 hover:text-red-500 text-xl">&times;</button>
+      <h2 class="text-xl font-bold text-gray-800">این یه پاپ‌آپه ⏰</h2>
+      <button id="closePopup" class="text-gray-500 hover:text-red-500 text-sm px-2 py-1 border border-gray-300 rounded" disabled>
+        بستن در <span id="countdown">5</span> ثانیه
+      </button>
     </div>
-    <p class="text-gray-600">این یه پاپ‌آپ انیمیشنی با تاخیر، افکت محو شدن، و طراحی زیباست. با Tailwind و JavaScript ساخته شده.</p>
+    <p class="text-gray-600">این پاپ‌آپ بعد از ۵ ثانیه به صورت خودکار بسته می‌شه. می‌تونی زودتر هم ببندیش 😉</p>
   </div>
 
   <script>
@@ -35,25 +37,48 @@
     const closeBtn = document.getElementById('closePopup');
     const popup = document.getElementById('popup');
     const overlay = document.getElementById('overlay');
+    const countdownEl = document.getElementById('countdown');
 
-    showBtn.addEventListener('click', () => {
+    let timer;
+    let countdown;
+
+    function openPopup() {
       overlay.classList.remove('hidden');
       popup.classList.remove('opacity-0', 'scale-90', 'pointer-events-none');
       popup.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
-    });
 
-    closeBtn.addEventListener('click', () => {
+      // شروع شمارش معکوس
+      let seconds = 5;
+      countdownEl.textContent = seconds;
+      closeBtn.disabled = true;
+
+      countdown = setInterval(() => {
+        seconds--;
+        countdownEl.textContent = seconds;
+        if (seconds <= 0) {
+          closePopup();
+        }
+      }, 1000);
+
+      // بعد از ۵ ثانیه ببند
+      timer = setTimeout(() => {
+        closePopup();
+      }, 5000);
+    }
+
+    function closePopup() {
+      clearTimeout(timer);
+      clearInterval(countdown);
       popup.classList.add('opacity-0', 'scale-90', 'pointer-events-none');
       popup.classList.remove('opacity-100', 'scale-100');
       setTimeout(() => {
         overlay.classList.add('hidden');
-      }, 300); // تأخیر تا انیمیشن کامل بشه
-    });
+      }, 300);
+    }
 
-    // بستن با کلیک روی پس‌زمینه
-    overlay.addEventListener('click', () => {
-      closeBtn.click();
-    });
+    showBtn.addEventListener('click', openPopup);
+    closeBtn.addEventListener('click', closePopup);
+    overlay.addEventListener('click', closePopup);
   </script>
 
 </body>
