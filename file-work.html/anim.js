@@ -5,11 +5,11 @@ const observer = new IntersectionObserver((entries, observer) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("fade-rotate-show");
             entry.target.classList.add("rotate-z-30");
-            observer.unobserve(entry.target); // فقط یک‌بار انیمیشن اجرا بشه
+            observer.unobserve(entry.target);
         }
     });
 }, {
-    threshold: 1 // زمانی که ۵۰٪ عکس داخل ویو شد
+    threshold: 1 
 });
 
 images.forEach(img => observer.observe(img));
