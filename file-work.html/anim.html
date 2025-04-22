@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="anim.js" defer></script>
+    <link rel="stylesheet" href="../src/output.css">
+    <style>
+        .fade-rotate-init {
+            opacity: 0;
+            transform: perspective(1000px) rotateY(90deg);
+            transition: all 4s ease;
+        }
+
+        .fade-rotate-show {
+            opacity: 1;
+            transform: perspective(1000px) rotateY(0deg);
+        }
+    </style>
+</head>
+<body class="w-full bg-black">
+    <div class="w-[80%] border mx-auto my-5 flex flex-col justify-center items-center font-kalam gap-10">
+
+        <!-- هر کدوم از این divها شامل عکس + متن هستن -->
+        <div class="mine w-[90%]">
+            <p class="text-center font-bold">Lorem ipsum dolor sit...</p>
+            <img src="img/m3.jpg" class="rounded-lg mx-auto fade-rotate-init" alt="">
+        </div>
+
+        <div class="mine w-full">
+            <p class="text-center font-bold">Lorem ipsum dolor sit...</p>
+            <img src="img/m5.jpg" class="rounded-lg float-left mx-auto fade-rotate-init" alt="">
+        </div>
+
+        <div class="mine w-full">
+            <p class="text-center font-bold">Lorem ipsum dolor sit...</p>
+            <img src="img/m7.jpg" class="rounded-lg mx-auto float-right fade-rotate-init" alt="">
+        </div>
+
+        <div class="mine w-[90%]">
+            <p class="text-center font-bold">Lorem ipsum dolor sit...</p>
+            <img src="img/m3.jpg" class="rounded-lg mx-auto float-left fade-rotate-init" alt="">
+        </div>
+
+        <div class="mine w-[90%]">
+            <p class="text-center font-bold">Lorem ipsum dolor sit...</p>
+            <img src="img/m3.jpg" class="rounded-lg mx-auto float-right fade-rotate-init" alt="">
+        </div>
+
+    </div>
+    <div class="w-[300px] h-[200px] perspective mx-auto my-10 ">
+        <img src="img/m3.jpg"
+             class="rounded-lg w-full h-full transition-all duration-700 opacity-0 transform rotate-y-90 hover:opacity-100 hover:rotate-y-0 hover:scale-105 hover:shadow-xl"
+             alt="عکس">
+      </div>
+       
+</body>
+</html>
