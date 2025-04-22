@@ -13,3 +13,12 @@ const observer = new IntersectionObserver((entries, observer) => {
 });
 
 images.forEach(img => observer.observe(img));
+const counterUp = document.getElementById("counter");
+let number = 0 ;
+const updateCounter = setInterval(()=>{
+    number++ ;
+    counterUp.textContent = number;
+    if(number >=700){
+        clearInterval(updateCounter)
+    }
+},1)
