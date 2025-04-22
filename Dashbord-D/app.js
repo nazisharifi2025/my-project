@@ -92,20 +92,11 @@ const timer5 = setInterval(() => {
   }
   counterElement5.textContent = Math.round(current5);
 }, stepTime5);
-// darck mode
-// const html = document.getElementsByTagName("body");
-// const toggelbtn =document.getElementById("toggelbtn");
-// toggelbtn.addEventListener("click", ()=>{
-  // const darck = html.classList.toggle("dark");
-  // savedTheme== "dark"? "dark":"light";
-// })
-// پیشرفته
+// 
 const themeToggle = document.getElementById("themeToggle");
 const sunIcon = document.getElementById("sunIcon");
 const moonIcon = document.getElementById("moonIcon");
 const html = document.documentElement;
-
-// تابع برای تنظیم آیکون‌ها
 function updateIcons(isDark) {
   if (isDark) {
     sunIcon.classList.remove("hidden");
@@ -115,8 +106,6 @@ function updateIcons(isDark) {
     moonIcon.classList.remove("hidden");
   }
 }
-
-// لود اولیه: چک کن که توی localStorage چی ذخیره شده
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
   html.classList.add("dark");
@@ -125,10 +114,62 @@ if (savedTheme === "dark") {
   html.classList.remove("dark");
   updateIcons(false);
 }
-
-// کلیک روی دکمه: تغییر حالت
 themeToggle.addEventListener("click", () => {
   const isDark = html.classList.toggle("dark");
   updateIcons(isDark);
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
+// Counter Endedd
+// darck mode
+// const themeToggle = document.getElementById("themeToggle");
+// const sunIcon = document.getElementById("sunIcon");
+// const moonIcon = document.getElementById("moonIcon");
+// const html = document.documentElement;
+// const toggelbtn =document.getElementById("toggelbtn");
+// function applyIntialTheme (){
+  // const themeColor = window.matchMedia(("(prefers-color-theme:dark)")).matches;
+  // const savedTheme = localStorage.theme;
+  // if(savedTheme==="dark" || (!savedTheme && themeColor)){
+    // html.classList.add("dark");
+  // }
+  // else{
+    // html.classList.remove("Dark");
+  // }
+// }
+// toggelbtn.addEventListener("click", ()=>{
+  // const isDark = html.classList.toggle("dark");
+  // savedTheme== "dark"? "dark":"light";
+// })
+// پیشرفته
+// 
+// const themeToggle = document.getElementById("themeToggle");
+// const sunIcon = document.getElementById("sunIcon");
+// const moonIcon = document.getElementById("moonIcon");
+// const html = document.documentElement;
+// 
+// function updateIcons(isDark) {
+  // 
+  // if (isDark) {
+    // sunIcon.classList.remove("hidden");
+    // moonIcon.classList.add("hidden");
+  // } else {
+    // sunIcon.classList.add("hidden");
+    // moonIcon.classList.remove("hidden");
+  // }
+// }
+// 
+// const savedTheme = localStorage.getItem("theme");
+// if (savedTheme === "dark") {
+  // html.classList.add("dark");
+  // updateIcons(true);
+// } else {
+  // html.classList.remove("dark");
+  // updateIcons(false);
+// }
+// 
+// themeToggle.addEventListener("click", () => {
+  // const isDark = html.classList.toggle("dark");
+  // updateIcons(isDark);
+  // localStorage.setItem("theme", isDark ? "dark" : "light");
+// });
+// 

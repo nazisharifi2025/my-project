@@ -1,19 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dark Mode Example</title>
-  <link href="../src/output.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تغییر حالت دارک و لایت</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+
+  <!-- Google Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body class="bg-white dark:bg-gray-900 text-black dark:text-white">
-  <div class="flex justify-center items-center min-h-screen">
-    <button id="themeToggle" class="px-4 py-2 rounded bg-blue-500 text-white">
-      Toggle Dark Mode
-    </button>
-    <div id="sunIcon" class="hidden">🌞</div>
-    <div id="moonIcon" class="hidden">🌙</div>
-  </div>
-  <script src="script.js"></script>
+
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-500 min-h-screen flex items-center justify-center">
+
+  <!-- دکمه تغییر تم -->
+  <button id="themeToggle" class="h-16 w-16 bg-gray-200 dark:bg-gray-700 text-center text-black dark:text-white 
+    rounded-full shadow-2xl fixed top-10 right-10 flex items-center justify-center transition-all">
+    
+    <span class="material-symbols-outlined" id="moonIcon">nightlight</span>
+    <span class="material-symbols-outlined hidden" id="sunIcon">sunny</span>
+  </button>
+
+  <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const sunIcon = document.getElementById("sunIcon");
+    const moonIcon = document.getElementById("moonIcon");
+    const html = document.documentElement;
+
+    function updateIcons(isDark) {
+      if (isDark) {
+        sunIcon.classList.remove("hidden");
+        moonIcon.classList.add("hidden");
+      } else {
+        sunIcon.classList.add("hidden");
+        moonIcon.classList.remove("hidden");
+      }
+    }
+
+    // ذخیره‌سازی حالت کاربر
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      html.classList.add("dark");
+      updateIcons(true);
+    } else {
+      html.classList.remove("dark");
+      updateIcons(false);
+    }
+
+    // تغییر حالت با کلیک
+    themeToggle.addEventListener("click", () => {
+      const isDark = html.classList.toggle("dark");
+      updateIcons(isDark);
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  </script>
 </body>
 </html>

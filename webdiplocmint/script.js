@@ -3,7 +3,6 @@ const sunIcon = document.getElementById("sunIcon");
 const moonIcon = document.getElementById("moonIcon");
 const html = document.documentElement;
 
-// تابع برای تنظیم آیکون‌ها
 function updateIcons(isDark) {
   if (isDark) {
     sunIcon.classList.remove("hidden");
@@ -14,7 +13,6 @@ function updateIcons(isDark) {
   }
 }
 
-// لود اولیه: چک کن که توی localStorage چی ذخیره شده
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
   html.classList.add("dark");
@@ -24,7 +22,6 @@ if (savedTheme === "dark") {
   updateIcons(false);
 }
 
-// کلیک روی دکمه: تغییر حالت
 themeToggle.addEventListener("click", () => {
   const isDark = html.classList.toggle("dark");
   updateIcons(isDark);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark:bg-nav1">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,22 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-    <script>
-      // Tailwind config to enable 'class' dark mode
-      tailwind.config = {
-        darkMode: 'class'
-      };
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+<style>
+</style>
   </head>
-  <body class="bg-nav1 w-full text-white dark:bg-nav1 dark:text-white transition-colors duration-500">
-    <button id="themeToggle" class=" h-16 w-16 bg-vNav text-center rounded-r-none shadow-2xl shadow-gray-400 rounded-lg absolute top-36 right-0">
-      <span class="material-symbols-outlined" id="moonIcon"  >
-        nightlight
-        </span>
-        <span class="material-symbols-outlined hidden" id="sunIcon">
-          sunny
-          </span>
-    </button>
+  <body class="w-full text-black bg-white dark:bg-[#25164A] dark:text-white transition-colors duration-500">
+    <button id="themeToggle" class="h-16 w-16 bg-vNav text-center 
+      rounded-r-none shadow-2xl shadow-gray-400 rounded-lg absolute top-36 right-0">
+    <span class="material-symbols-outlined" id="moonIcon">nightlight</span>
+    <span class="material-symbols-outlined hidden" id="sunIcon">sunny</span>
+  </button>
+    <!-- Light mode ended-->
     <div class="flex justify-between h-12 bg-navg w-full leading-12 pl-3">
       <p>Call Us: +1 800 123 456 789 - Mail Us: Itcroc@mail.com</p>
       <div class="flex">
@@ -39,18 +39,18 @@
       </div>
     </div>
     <div class="h-20 w-full bg-navar1 px-12 leading-20 flex justify-between">
-      <div class="flex space-x-8 font-bold text-[20px] px-6">
+      <div class="flex space-x-2 font-bold text-[20px]">
         <img src="img/logo_1.png" class="w-56 leading-20 my-3 h-12" alt="" />
         <ul class="flex space-x-4">
           <li class="relative group">
-            <a href="">Demos </a>
-            <span class="material-symbols-outlined mt-1" style="font-size: 19">
+            <a href="">Demos
+            <span class="material-symbols-outlined" style="font-size: 19">
               stat_minus_1
-            </span>
+            </span></a>
             <div class="hidden group-hover:block">
             <ul class="bg-navar1 w-[1000px] -ml-48 absolute top-14 h-32 justify-between items-center px-2 flex gap-3 ">
-              <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-butten  shadow text-center shadow-gray-100">Light</li>
-              <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-butten shadow text-center shadow-gray-100">Dark</li>
+              <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-violet-950  shadow text-center shadow-gray-100">Light</li>
+              <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-violet-950 shadow text-center shadow-gray-100">Dark</li>
             </ul>
           </div>
           </li>
@@ -218,7 +218,7 @@
           person
         </span>
         <button
-          class="h-12 w-28 rounded-[6px] bg-butten text-center text-[18px] leading-12"
+          class="h-12 w-28 rounded-[6px] bg-violet-950 text-center text-[18px] leading-4"
         >
           Get Start
         </button>
@@ -250,7 +250,7 @@
         <span class="-mt-56">4.0 (120 Reviews)</span>
       </div>
       <button
-        class="text-2xl h-14 my-20 rounded-[8px] w-72 bg-butten hover:bg-nav2"
+        class="text-2xl h-14 my-20 rounded-[8px] w-72 bg-violet-900 hover:bg-nav2"
       >
         <a href="Dashbord2.html">Creat a New Course</a>
         <span class="material-symbols-outlined"> arrow_forward </span>
@@ -261,28 +261,28 @@
     <div class="w-[90%] mx-auto h-[250vh] mt-12 flex justify-between space-x-4">
       <!-- vnav -->
       <div
-        class="w-[25%] h-[180vh] border border-butten bg-vNav flex flex-col gap-7 rounded-md"
+        class="w-[25%] h-[210vh] border border-violet-950 bg-vNav flex flex-col gap-7 rounded-md"
       >
         <div class="mx-12 my-9">
           <p class="text-[23px]">Welcome, Micle</p>
           <p class="text-[23px]">Obema</p>
         </div>
         <div>
-          <ul class="flex flex-col space-x-6 gap-6 text-[24px]">
+          <ul class="flex flex-col gap-6 text-[24px]">
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2">home </span>
               <a href="" class="">Dashboard</a>
             </li>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2">person </span>
               <a href="" class="">My Profiel</a>
             </li>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2">
                 import_contacts</span
@@ -290,63 +290,63 @@
               <a href="" class="">Message</a>
             </li>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2"> bookmark </span>
               <a href="" class="">WeshList</a>
             </li>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2"> star </span>
               <a href="" class="">Reviews</a>
             </li>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2"> help</span>
               <a href="" class="">My Quiz Attempts</a>
             </li>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2">receipt_long </span>
               <a href="" class="">Order Hestory</a>
             </li>
             <h1 class="font-bold mx-6">My Course</h1>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2">mimo</span>
               <a href="" class="">My Course</a>
             </li>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2">volume_up </span>
               <a href="" class="">Announcments</a>
             </li>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2"> chat_bubble </span>
               <a href="" class="">Quiz Attempt</a>
             </li>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2"> volume_up </span>
               <a href="" class="">Assignments</a>
             </li>
             <h1 class="font-bold mx-6">User</h1>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2"> settings </span>
               <a href="" class="">settings</a>
             </li>
             <li
-              class="w-[90%] flex space-x-4 border-b mx-auto border-butten pb-1 hover:text-butten"
+              class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
             >
               <span class="material-symbols-outlined mt-2">volume_up </span>
               <a href="" class="">Logout</a>
@@ -355,16 +355,16 @@
         </div>
       </div>
       <!-- vnav endedd -->
-      <div class="bg-vNav border-butten rounded-2xl w-[80%] h-[140vh] border">
+      <div class="bg-vNav border-violet-950 rounded-2xl w-[80%] h-[140vh] border">
         <h1
-          class="mt-12 font-bold text-3xl border-b border-b-butten pb-4 mx-auto w-[80%]"
+          class="mt-12 font-bold text-3xl border-b border-b-violet-900 pb-4 mx-auto w-[80%]"
         >
           Dashboard
         </h1>
         <div class="flex w-[90%] justify-between px-7 gap-4 mx-auto">
           <div class="flex flex-col gap-3 w-[60%] mt-8">
             <div
-              class="w-full h-52 border border-butten rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
+              class="w-full h-52 border border-violet-900 rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
             >
               <img src="img/counter__1.png" class="h-20 w-20" alt="" />
               <div class="font-bold text-2xl">
@@ -373,7 +373,7 @@
               </div>
             </div>
             <div
-              class="w-full h-52 border border-butten rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
+              class="w-full h-52 border border-violet-900 rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
             >
               <img src="img/counter__3.png" class="h-20 w-20" alt="" />
               <div class="font-bold text-2xl">
@@ -382,7 +382,7 @@
               </div>
             </div>
             <div
-              class="w-full h-52 border border-butten rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
+              class="w-full h-52 border border-violet-900  rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
             >
               <img src="img/counter__3 (1).png" class="h-20 w-20" alt="" />
               <div class="font-bold text-2xl">
@@ -393,7 +393,7 @@
           </div>
           <div class="flex flex-col gap-3 w-[60%] mt-8">
             <div
-              class="w-full h-52 border border-butten rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
+              class="w-full h-52 border border-violet-900  rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
             >
               <img src="img/counter__2.png" class="h-20 w-20" alt="" />
               <div class="font-bold text-2xl">
@@ -402,7 +402,7 @@
               </div>
             </div>
             <div
-              class="w-full h-52 border border-butten rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
+              class="w-full h-52 border border-violet-900  rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
             >
               <img src="img/counter__4.png" class="h-20 w-20" alt="" />
               <div class="font-bold text-2xl">
@@ -411,7 +411,7 @@
               </div>
             </div>
             <div
-              class="w-full h-52 border border-butten rounded-2xl flex justify-center items-center space-x-4 my-auto mx-auto"
+              class="w-full h-52 border border-violet-900  rounded-2xl flex justify-center items-center space-x-4 my-auto mx-auto"
             >
               <img src="img/counter__4 (1).png" class="h-20 w-20" alt="" />
               <div class="font-bold text-2xl">
@@ -423,10 +423,10 @@
           </div>
         </div>
         <div
-          class="bg-vNav h-[80vh] rounded-2xl border border-butten w-full mt-32"
+          class="bg-vNav h-[80vh] rounded-2xl border border-violet-900  w-full mt-32"
         >
           <div
-            class="mt-12 border-b border-b-butten pb-4 mx-auto w-[80%] flex justify-between"
+            class="mt-12 border-b border-b-violet-900  pb-4 mx-auto w-[80%] flex justify-between"
           >
             <h1 class="font-bold text-3xl">Dashboard</h1>
             <p class="text-2xl">Learn more....</p>
@@ -494,16 +494,17 @@
         class="border-b border-b-butten pb-4 mx-auto w-[80%] h-36 flex justify-between px-5"
       >
         <img src="img/logo_2.png" class="h-20 w-44 my-10" alt="" />
-        <div class="leading-36 h-36">
+        <div class="leading-36 h-36 relative">
           <input
             type="text"
-            class="relative h-12 w-64 border outline-0 rounded-sm border-r-0 text-gray-800 rounded-r-none rounded-rb-0 border-butten bg-white"
+            class=" h-12 w-64 border outline-0 rounded-sm border-r-0 text-gray-800 rounded-r-none rounded-rb-0 border-butten bg-white"
             placeholder="Enter your email here"
           />
+          <p class="absolute top-0 -right-30 z-50">  Subscribe Now</p>
           <button
-            class="bg-butten rounded-sm text-black rounded-l-none absolute h-12 w-28 mt-12 leading-12"
+            class="bg-violet-950 rounded-sm text-black rounded-l-none absolute h-12 w-32 top-12"
           >
-            Subscribe Now
+          
           </button>
         </div>
       </div>
