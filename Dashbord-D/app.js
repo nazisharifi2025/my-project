@@ -119,6 +119,20 @@ themeToggle.addEventListener("click", () => {
   updateIcons(isDark);
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
+// click
+const menuToggle = document.getElementById('menuToggle');
+const menuClose = document.getElementById('menuClose');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.remove('hidden');
+  mobileMenu.classList.add("flex");
+});
+
+menuClose.addEventListener('click', () => {
+  mobileMenu.classList.add('hidden');
+  mobileMenu.classList.remove("flex");
+});
 // Counter Endedd
 // darck mode
 // const themeToggle = document.getElementById("themeToggle");
