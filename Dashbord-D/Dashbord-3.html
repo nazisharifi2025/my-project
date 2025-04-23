@@ -38,10 +38,10 @@
       </div>
     </div>
     <!-- nav -->
-    <div class="h-20 w-full bg-navar1 px-12 leading-20 flex justify-between">
+    <div class="h-20 w-full bg-navar1 px-4 md:px-12 leading-20 flex justify-between items-center">
       <div class="flex space-x-8 font-bold text-[20px] px-6 ">
         <img src="img/logo_1.png" class="lg:w-56 lg:leading-20 my-3 w-44 h-10 md:w-44 md:h-10 lg:h-12" alt="" />
-        <ul class="flex space-x-4 flex-col lg:flex-row md:flex-col">
+        <ul class="hidden md:flex space-x-4 font-bold text-[18px]">
           <li class="relative group">
             <a href="">Demos </a>
             <span class="material-symbols-outlined mt-1" style="font-size: 19">
@@ -211,6 +211,8 @@
         <span class="material-symbols-outlined mt-3" style="font-size: 30px">
           shopping_cart
         </span>
+        <button id="menuToggle" class="md:hidden">
+          <span class="material-symbols-outlined text-white text-3xl">menu</span>
         <span
           class="material-symbols-outlined border rounded-[6px] w-12 text-center pt-2 h-12"
           style="font-size: 30px"
@@ -218,7 +220,7 @@
           person
         </span>
         <button
-          class="h-12 w-28 rounded-[6px] bg-butten text-center text-[18px] leading-12"
+        class="hidden md:block h-12 w-28 rounded-[6px] bg-butten text-center text-[18px] text-white leading-12"
         >
           Get Start
         </button>
