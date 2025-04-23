@@ -4,71 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../src/output.css">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-    rel="stylesheet"
-  />
-  <script src="../Dashbord-D/app.js" defer></script>
 </head>
 <body>
-    <!-- Navbar Wrapper -->
-<div class="h-20 w-full bg-navar1 px-4 md:px-12 leading-20 flex justify-between items-center">
-    <!-- Left: Logo -->
-    <img src="img/logo_1.png" class="w-32 md:w-56 h-12" alt="Logo" />
-  
-    <!-- Middle: Full Menu (فقط در دسکتاپ) -->
-    <ul class="hidden md:flex space-x-4 font-bold text-[18px]">
-      <li><a href="#">Demos</a></li>
-      <li><a href="#">Pages</a></li>
-      <li><a href="#">Courses</a></li>
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">eCommerce</a></li>
-    </ul>
-  
-    <!-- Right: Hamburger + Cart -->
-    <div class="flex space-x-4 items-center">
-      <!-- Hamburger (فقط در موبایل) -->
-      <button id="menuToggle" class="md:hidden">
-        <span class="material-symbols-outlined text-white text-3xl">menu</span>
-      </button>
-  
-      <!-- Cart Icon -->
-      <span class="material-symbols-outlined text-white text-3xl">shopping_cart</span>
-  
-      <!-- Get Started Button (فقط در دسکتاپ) -->
-      <button class="hidden md:block h-12 w-28 rounded-[6px] bg-butten text-center text-[18px] text-white leading-12">
-        Get Start
-      </button>
-    </div>
-  </div>
-<!-- Sidebar Mobile Menu -->
-<div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-vNav shadow-lg flex-col px-6 py-6 space-y-4 transform translate-x-full transition-transform duration-300 z-50 md:hidden">
-    <button id="menuClose" class="text-right w-full">
-      <span class="material-symbols-outlined text-white text-3xl">close</span>
-    </button>
-  
-    <ul class="text-white font-bold flex flex-col gap-4 text-lg">
-      <li><a href="#">Demos</a></li>
-      <li><a href="#">Pages</a></li>
-      <li><a href="#">Courses</a></li>
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">eCommerce</a></li>
-    </ul>
-  </div>
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const menuClose = document.getElementById('menuClose');
-    const mobileMenu = document.getElementById('mobileMenu');
-  
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.remove('translate-x-full');
-    });
-  
-    menuClose.addEventListener('click', () => {
-      mobileMenu.classList.add('translate-x-full');
-    });
-  </script>
-      
+    
 </body>
 </html>
