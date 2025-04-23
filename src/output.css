@@ -403,6 +403,12 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .-my-14 {
+    margin-block: calc(var(--spacing) * -14);
+  }
+  .my-0 {
+    margin-block: calc(var(--spacing) * 0);
+  }
   .my-1 {
     margin-block: calc(var(--spacing) * 1);
   }
@@ -448,8 +454,14 @@
   .-mt-7 {
     margin-top: calc(var(--spacing) * -7);
   }
+  .-mt-10 {
+    margin-top: calc(var(--spacing) * -10);
+  }
   .-mt-12 {
     margin-top: calc(var(--spacing) * -12);
+  }
+  .-mt-30 {
+    margin-top: calc(var(--spacing) * -30);
   }
   .-mt-56 {
     margin-top: calc(var(--spacing) * -56);
@@ -600,6 +612,12 @@
   }
   .h-1 {
     height: calc(var(--spacing) * 1);
+  }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
@@ -1007,6 +1025,9 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .gap-2\.5 {
+    gap: calc(var(--spacing) * 2.5);
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -2054,6 +2075,26 @@
       position: absolute;
     }
   }
+  .md\:mx-auto {
+    @media (width >= 48rem) {
+      margin-inline: auto;
+    }
+  }
+  .md\:mt-18 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 18);
+    }
+  }
+  .md\:-ml-28 {
+    @media (width >= 48rem) {
+      margin-left: calc(var(--spacing) * -28);
+    }
+  }
+  .md\:ml-6 {
+    @media (width >= 48rem) {
+      margin-left: calc(var(--spacing) * 6);
+    }
+  }
   .md\:block {
     @media (width >= 48rem) {
       display: block;
@@ -2139,6 +2180,11 @@
       display: none;
     }
   }
+  .lg\:h-10 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 10);
+    }
+  }
   .lg\:h-12 {
     @media (width >= 64rem) {
       height: calc(var(--spacing) * 12);
@@ -2169,9 +2215,23 @@
       flex-direction: row;
     }
   }
+  .lg\:justify-between {
+    @media (width >= 64rem) {
+      justify-content: space-between;
+    }
+  }
   .lg\:gap-0 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:space-x-4 {
+    @media (width >= 64rem) {
+      :where(& > :not(:last-child)) {
+        --tw-space-x-reverse: 0;
+        margin-inline-start: calc(calc(var(--spacing) * 4) * var(--tw-space-x-reverse));
+        margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)));
+      }
     }
   }
   .lg\:space-x-9 {
