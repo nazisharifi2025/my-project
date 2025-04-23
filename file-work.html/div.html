@@ -5,14 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../src/output.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
 </head>
 <body>
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est vel. Harum aspernatur quia natus animi sed dignissimos iure, esse pariatur blanditiis reprehenderit sint, amet voluptate dolore, at omnis eveniet?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est vel. Harum aspernatur quia natus animi sed dignissimos iure, esse pariatur blanditiis reprehenderit sint, amet voluptate dolore, at omnis eveniet?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est vel. Harum aspernatur quia natus animi sed dignissimos iure, esse pariatur blanditiis reprehenderit sint, amet voluptate dolore, at omnis eveniet?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est vel. Harum aspernatur quia natus animi sed dignissimos iure, esse pariatur blanditiis reprehenderit sint, amet voluptate dolore, at omnis eveniet?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est vel. Harum aspernatur quia natus animi sed dignissimos iure, esse pariatur blanditiis reprehenderit sint, amet voluptate dolore, at omnis eveniet?</p>
+    <!-- Header Top Info Bar -->
+<div class="flex flex-col md:flex-row justify-between items-center bg-navg text-white text-sm sm:text-base px-4 md:px-12 py-2 space-y-2 md:space-y-0">
+    <p class="text-center md:text-left">📞 Call Us: +1 800 123 456 789 - 📧 Mail Us: Itcroc@mail.com</p>
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-[18px]">location_on</span>
+      <p>684 West College St. Sun City, USA</p>
+      <img src="../Dashbord-D/img/Screenshot 2025-04-19 101314.png" class="h-6 w-auto" alt="Location" />
     </div>
+  </div>
+  <!-- heder ended  -->
+   <!-- Navbar -->
+<div class="w-full bg-navar1 py-4 px-4 md:px-12 flex flex-col lg:flex-row justify-between items-center">
+    <!-- Logo + Menu Items -->
+    <div class="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 w-full lg:w-auto">
+      <img src="../Dashbord-D/img/logo_1.png" class="w-40 md:w-56 h-auto" alt="Logo" />
+      <ul class="flex flex-wrap justify-center gap-4 font-bold text-[16px] md:text-[18px]">
+        <li><a href="#">Demos</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">eCommerce</a></li>
+      </ul>
+    </div>
+  
+    <!-- Action Buttons -->
+    <div class="flex items-center space-x-4 mt-4 lg:mt-0">
+      <span class="material-symbols-outlined text-3xl">shopping_cart</span>
+      <span class="material-symbols-outlined text-3xl border rounded-lg w-10 h-10 flex items-center justify-center">person</span>
+      <button class="bg-butten text-white px-6 py-2 rounded-lg text-sm md:text-base">Get Start</button>
+    </div>
+  </div>
+  
+   <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch  -->
 </body>
 </html>
