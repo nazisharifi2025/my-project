@@ -248,7 +248,7 @@
     </div>
     <!-- endedd hero -->  
      <!-- Stert -->
-      <div class="h-[400vh] w-[90%] lg:flex lg:space-x-8 lg:flex-row flex-col gap-10 mx-auto">
+      <div class=" lg:h-[400vh] h-[320vh] w-[90%] lg:flex lg:space-x-8 lg:flex-row flex-col gap-10 mx-auto">
         <div class="lg:w-[60%] w-full mt-10 h-[220vh] border border-butten rounded-lg bg-vNav">
           <h1 class="pb-3 pl-5 mt-4 mx-auto font-bold text-2xl border-4 rounded-2xl rounded-b-none border-butten w-[90%]">Course Info <span class="material-symbols-outlined float-right pr-3 mt-2">
             stat_minus_1
@@ -299,7 +299,7 @@
               </select>
             </div>
             <h1 class=" font-bold text-[21px] mx-4 my-4 mt-4">About Course</h1>
-            <textarea name="Course" id="" class="h-[50vh] w-[90%] ml-9 outline-0 hover:border-white border-2 border-butten bg-vNav rounded-lg"></textarea>
+            <textarea name="Course" id="" class="h-[50vh] w-[90%] mx-4 outline-0 hover:border-white border-2 border-butten bg-vNav rounded-lg"></textarea>
         <button class="h-14 rounded-lg ml-9 w-36 mt-3 bg-butten
          text-white font-bold text-center py-4 px-6">Update Info</button> 
        </div>
@@ -347,7 +347,7 @@
       </div>
         </div>
         <!-- div1 -->
-        <div class="lg:w-[30%] w-full px-12 h-[130vh] bg-vNav border-2 border-butten mt-10 flex flex-col gap-5">
+        <div class="lg:w-[30%] w-full px-12 lg:h-[130vh] h-[90vh] bg-vNav border-2 border-butten mt-10 flex flex-col gap-5">
           <h1 class="font-bold text-3xl ml-3">Course Upload Tips</h1>
           <p class="mt-1 ml-2 text-[20px]"><span class="material-symbols-outlined text-green-700"
              style="font-size: 19px;">
@@ -381,26 +381,27 @@
       </div>
     <!-- ended -->
     <!-- footer stard -->
-    <footer class="h-screen bg-vNav">
+    <footer class="lg:h-screen h-[170vh] md:h-[140vh] bg-vNav">
       <div
-        class="border-b border-b-butten pb-4 mx-auto w-[80%] h-36 flex justify-between px-5"
+        class="border-b border-b-butten pb-4 mx-auto w-[80%] lg:h-36 h-64 lg:flex lg:justify-between lg:flex-row flex-col px-5"
       >
-        <img src="img/logo_2.png" class="h-20 w-44 my-10" alt="" />
-        <div class="leading-36 h-36">
+        <img src="img/logo_2.png" class="h-20 w-44 my-10 mx-12 lg:mx-0" alt="" />
+        <div class="leading-36 h-36 relative -ml-12 lg:-ml-0 md:ml-14">
           <input
             type="text"
-            class="relative h-12 w-64 border outline-0 rounded-sm border-r-0 text-gray-800 rounded-r-none rounded-rb-0 border-butten bg-white"
+            class=" h-12 w-64 border outline-0 rounded-sm border-r-0 text-gray-800 rounded-r-none rounded-rb-0 border-butten bg-white"
             placeholder="Enter your email here"
           />
+          <p class="absolute top-0 lg:-right-30 md:right-36 -right-10 z-50">  Subscribe Now</p>
           <button
-            class="bg-butten rounded-sm text-black rounded-l-none absolute h-12 w-28 mt-12 leading-12"
+            class="bg-violet-950 rounded-sm text-black rounded-l-none absolute h-12 w-32 top-12"
           >
-            Subscribe Now
+          
           </button>
         </div>
       </div>
-      <div class="flex w-[90%] justify-center space-x-20 border-b border-b-butten pb-5 mx-auto mt-12">
-        <div class="flex flex-col gap-7 w-[20%]">
+      <div class="flex lg:flex-row flex-col w-[90%] justify-center space-x-20 border-b border-b-butten pb-5 mx-auto mt-12">
+        <div class="flex flex-col gap-7 lg:w-[20%] w-full">
           <h1 class="font-bold text-2xl">About Us</h1>
           <p class="text-gray-400 font-bold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A placeat
@@ -408,7 +409,7 @@
             Molestiae voluptatum commodi iste, exercitationem non magnam odio.
             Architecto, quaerat?
           </p>
-          <img src="img/Screenshot 2025-04-19 154216.png" alt="" />
+          <img src="img/Screenshot 2025-04-19 154216.png" class="h-16 mx-auto mb-4 w-48" alt="" />
         </div>
         <div>
           <ul class="text-gray-500 flex flex-col gap-6 font-bold">
@@ -456,6 +457,7 @@
        
       </div>
     </footer>
+
     <!-- Footer ended -->
   </body>
 </html>
