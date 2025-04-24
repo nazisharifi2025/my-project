@@ -38,31 +38,34 @@
       </div>
     </div>
     <!-- nav -->
-    <div class="h-20 w-full bg-navar1 px-4 md:px-12 leading-20 flex justify-between items-center">
-      <div class="flex space-x-8 font-bold text-[20px] px-6 ">
-        <img src="img/logo_1.png" class="lg:w-56 lg:leading-20 my-3 w-44 h-10 md:w-44 md:h-10 lg:h-12" alt="" />
-        <ul class="hidden md:flex space-x-4 font-bold text-[18px]">
+    <div class="lg:h-20 w-full bg-navar1 lg:px-2 md:px-9 lg:leading-20 lg:space-x-9 flex justify-between">
+      <!-- responsiv ended -->
+        <img src="img/logo_1.png" class="w-56 leading-20 my-3 h-12" alt="" />
+        <ul  id="mobileMenu" class="hidden space-x-6 flex-col gap-9  lg:flex lg:gap-0 lg:flex-row md:flex-col absolute top-24 right-0 lg:relative md:absolute lg:top-0 lg:right-16  h-96  lg:h-20 lg:w-[30%] w-[30%] bg-navar1">
+          <button id="menuClose" class="text-left lg:hidden block md:block">
+            <span class="material-symbols-outlined text-white text-2xl">close</span>
+            </button>
           <li class="relative group">
-            <a href="">Demos </a>
-            <span class="material-symbols-outlined mt-1" style="font-size: 19">
+            <a href="" class="flex ">Demos
+            <span class="material-symbols-outlined mt-8 md:hidden hidden lg:block" style="font-size: 19">
               stat_minus_1
-            </span>
-            <div class="hidden group-hover:block">
+            </span></a>
+            <div class="hidden group-hover:hidden lg:group-hover:block">
             <ul class="bg-navar1 w-[1000px] -ml-48 absolute top-14 h-32 justify-between items-center px-2 flex gap-3 ">
-              <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-butten  shadow text-center shadow-gray-100">Light</li>
-              <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-butten shadow text-center shadow-gray-100">Dark</li>
+              <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-violet-950  shadow text-center shadow-gray-100">Light</li>
+              <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-violet-950 shadow text-center shadow-gray-100">Dark</li>
             </ul>
           </div>
           </li>
           <li class="relative  group">
-            <a href="">Pages </a>
+            <a href="" class="flex">Pages
             <span
-              class="material-symbols-outlined mt-2"
+              class="material-symbols-outlined mt-8 lg:block md:hidden hidden"
               style="font-size: 20px"
             >
               stat_minus_1
-            </span>
-            <div class="hidden group-hover:block">
+            </span> </a>
+            <div class="hidden group-hover:hidden lg:group-hover:block">
               <ul class="bg-navar1 w-[900px] absolute top-18 left-0 h-[90vh] rounded-b-lg">
                 <table class="mr-14">
                   <tr>
@@ -112,14 +115,14 @@
             </div>
           </li>
           <li class="relative group">
-            <a href="">Courses </a>
+            <a href="" class="flex">Courses 
             <span
-              class="material-symbols-outlined mt-1"
+              class="material-symbols-outlined mt-8 lg:block md:hidden hidden"
               style="font-size: 20px"
             >
               stat_minus_1
-            </span>
-          <div class="hidden group-hover:block ">
+            </span></a>
+          <div class="hidden group-hover:hidden lg:group-hover:block">
             <div class="flex space-x-2">
             <ul class="bg-navar1 w-[1000px] absolute top-18 -left-72 h-[110vh] rounded-b-lg">
               <table class="flex mx-12">
@@ -166,14 +169,14 @@
           </div>
         </li>
           <li  class="relative group">
-            <a href="">Dashboard </a>
+            <a href="" class="flex">Dashboard 
             <span
-              class="material-symbols-outlined mt-1"
+              class="material-symbols-outlined mt-8 lg:block md:hidden hidden"
               style="font-size: 20px"
             >
               stat_minus_1
-            </span>
-            <ul class="h-56 w-52 bg-navar1 absolute top-20 hidden group-hover:block">
+            </span> </a>
+            <ul class="h-56 w-52 bg-navar1 absolute top-20 hidden group-hover:hidden lg:group-hover:block">
               <li class="-mt-6 flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-butten">Admin <span class="material-symbols-outlined mt-6">
                 chevron_right
                 </span></li>
@@ -186,41 +189,42 @@
             </ul>
           </li>
           <li class="relative group">
-            <a href=""
+            <a href="" class="flex"
               >eCommerce
               <span
-                class="material-symbols-outlined mt-1"
+                class="material-symbols-outlined mt-8 lg:block md:hidden hidden
+                "
                 style="font-size: 20px"
               >
                 stat_minus_1
-              </span>
-              <ul class="h-60 w-52 bg-navar1 absolute top-20 hidden group-hover:block">
+              </span></a>
+              <ul class="h-60 w-52 bg-navar1 absolute top-20 hidden group-hover:hidden lg:group-hover:block">
                 <li class="-mt-6 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Shop</li>
                 <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Prouduct Detaiel</li>
                 <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Cart</li>
                 <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Checkout</li>
                 <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Wishlist</li>
-
+  
               </ul>
             </a>
           </li>
         </ul>
-      </div>
       <!--  -->
       <div class="flex space-x-6 leading-20 py-3">
         <span class="material-symbols-outlined mt-3" style="font-size: 30px">
           shopping_cart
         </span>
-        <button id="menuToggle" class="md:hidden">
+        <button id="menuToggle" class="md:block block lg:hidden">
           <span class="material-symbols-outlined text-white text-3xl">menu</span>
+        </button>
         <span
-          class="material-symbols-outlined border rounded-[6px] w-12 text-center pt-2 h-12"
+          class="material-symbols-outlined border rounded-[6px] w-12 text-center pt-2 h-12 md:hidden hidden lg:block"
           style="font-size: 30px"
         >
           person
         </span>
         <button
-        class="hidden md:block h-12 w-28 rounded-[6px] bg-butten text-center text-[18px] text-white leading-12"
+          class="h-12 w-28 rounded-[6px] bg-violet-950 text-center text-[18px] leading-4 hidden md:hidden lg:block"
         >
           Get Start
         </button>
@@ -229,20 +233,22 @@
     <!-- navar endind -->
     <!-- start herro -->
     <div
-      class=" h-[50vh] flex space-x-48 pl-36  w-full bg-navg py-12"
+      class=" lg:h-[50vh] md:h-[50vh] h-[40vh] flex md:space-x-7 space-x-1 lg:space-x-48 lg:pl-36 pl-0 md:pl-28  w-full bg-navg py-12"
     >
-    <img src="img/herobanner__1.png" class="h-28 w-32 mt-32 animate-bounce translate-7 transition-all delay-300" alt="">
-    <div class=" flex flex-col justify-center items-center">
-      <img src="img/herobanner__3.png" class="animate-bounce" alt="">
-      <h1 class="font-bold text-4xl font-kalam">Create Course</h1>
+    <img src="img/herobanner__1.png" class="lg:h-28 h-20 w-28 lg:w-32 lg:mt-24 md:mt-5 mt-48 animate-bounce translate-7 transition-all delay-300" alt="">
+    <div class=" flex lg:flex-col flex-row lg:justify-center justify-between items-center">
+      <img src="img/herobanner__3.png" class="animate-bounce float-right lg:float-none absolute top-36 right-20 lg:relative" alt="">
+      <div class="flex flex-col">
+      <h1 class="font-bold text-4xl font-kalam float-left lg:float-none">Create Course</h1>
       <p class="font-bold">Home <span class="material-symbols-outlined" style="font-size: 15px;">
         chevron_right
         </span>Create Course</p>
+      </div>
     </div>
     </div>
     <!-- endedd hero -->  
      <!-- Stert -->
-      <div class="h-[300vh] w-[90%] flex space-x-8 mx-auto">
+      <div class="h-[300vh] w-[90%] lg:flex lg:space-x-8 lg:flex-row flex-col mx-auto">
         <div class="w-[60%] mt-10 h-[195vh] border border-butten rounded-lg bg-vNav">
           <h1 class="pb-3 pl-5 mt-4 mx-auto font-bold text-2xl border-4 rounded-2xl rounded-b-none border-butten w-[90%]">Course Info <span class="material-symbols-outlined float-right pr-3 mt-2">
             stat_minus_1
