@@ -25,6 +25,7 @@
     --color-purple-600: oklch(55.8% 0.288 302.321);
     --color-purple-700: oklch(49.6% 0.265 301.924);
     --color-purple-800: oklch(43.8% 0.218 303.724);
+    --color-fuchsia-900: oklch(40.1% 0.17 325.612);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -2024,6 +2025,13 @@
       }
     }
   }
+  .hover\:bg-fuchsia-900 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-fuchsia-900);
+      }
+    }
+  }
   .hover\:bg-gray-100 {
     &:hover {
       @media (hover: hover) {
@@ -2049,6 +2057,27 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-purple-700);
+      }
+    }
+  }
+  .hover\:bg-clip-content {
+    &:hover {
+      @media (hover: hover) {
+        background-clip: content-box;
+      }
+    }
+  }
+  .hover\:mask-clip-fill {
+    &:hover {
+      @media (hover: hover) {
+        mask-clip: fill-box;
+      }
+    }
+  }
+  .hover\:mask-no-clip {
+    &:hover {
+      @media (hover: hover) {
+        mask-clip: no-clip;
       }
     }
   }
