@@ -29,8 +29,11 @@
   }
 }
 @layer utilities{
-  .hero-lg-responsiv{
-    
+  .clip-path-diagonal {
+    clip-path: polygon(0 0, 40% 0, 0 40%);
+  }
+  .group-hover\:clip-path-full:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 }
 @layer utilities {

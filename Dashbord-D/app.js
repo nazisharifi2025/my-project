@@ -133,6 +133,22 @@ menuClose.addEventListener('click', () => {
   mobileMenu.classList.add('hidden');
   mobileMenu.classList.remove("flex");
 });
+  document.getElementById("divOne").addEventListener("click", function () {
+    const targetDiv = document.getElementById("div1");
+    targetDiv.classList.toggle("hidden"); // نمایش یا مخفی کردن بر اساس وضعیت فعلی
+  });
+
+
+// 
+// const div1 = document.getElementById("div1");
+// const divOne = document.getElementById("divOne");
+// divOne.addEventListener("click",() =>{
+  // divOne.classList.remove("h-[120vh]");
+  // divOne.classList.add("h-[340vh]");
+  // div1.classList.remove("hidden");
+  // div1.classList.add("flex");
+// 
+// })
 // Counter Endedd
 // darck mode
 // const themeToggle = document.getElementById("themeToggle");
