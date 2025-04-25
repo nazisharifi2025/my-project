@@ -133,6 +133,7 @@ menuClose.addEventListener('click', () => {
   mobileMenu.classList.add('hidden');
   mobileMenu.classList.remove("flex");
 });
+
   document.getElementById("divOne").addEventListener("click", function () {
     const targetDiv = document.getElementById("div1");
     targetDiv.classList.toggle("hidden"); // نمایش یا مخفی کردن بر اساس وضعیت فعلی
