@@ -409,6 +409,9 @@
   .mx-6 {
     margin-inline: calc(var(--spacing) * 6);
   }
+  .mx-7 {
+    margin-inline: calc(var(--spacing) * 7);
+  }
   .mx-12 {
     margin-inline: calc(var(--spacing) * 12);
   }
@@ -561,6 +564,9 @@
   }
   .mr-14 {
     margin-right: calc(var(--spacing) * 14);
+  }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
@@ -718,6 +724,9 @@
   .h-\[60vh\] {
     height: 60vh;
   }
+  .h-\[70\%\] {
+    height: 70%;
+  }
   .h-\[70vh\] {
     height: 70vh;
   }
@@ -799,9 +808,6 @@
   .h-\[250vh\] {
     height: 250vh;
   }
-  .h-\[280vh\] {
-    height: 280vh;
-  }
   .h-\[300px\] {
     height: 300px;
   }
@@ -834,6 +840,9 @@
   }
   .h-\[500vh\] {
     height: 500vh;
+  }
+  .h-fit {
+    height: fit-content;
   }
   .h-full {
     height: 100%;
@@ -1271,6 +1280,10 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
+  .rounded-b-xl {
+    border-bottom-right-radius: var(--radius-xl);
+    border-bottom-left-radius: var(--radius-xl);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -1533,6 +1546,9 @@
   }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
+  }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
   }
   .pt-7 {
     padding-top: calc(var(--spacing) * 7);
@@ -2262,11 +2278,6 @@
       height: 140vh;
     }
   }
-  .md\:h-\[280vh\] {
-    @media (width >= 48rem) {
-      height: 280vh;
-    }
-  }
   .md\:h-\[305vh\] {
     @media (width >= 48rem) {
       height: 305vh;
@@ -2457,16 +2468,6 @@
       height: 250vh;
     }
   }
-  .lg\:h-\[310vh\] {
-    @media (width >= 64rem) {
-      height: 310vh;
-    }
-  }
-  .lg\:h-\[320vh\] {
-    @media (width >= 64rem) {
-      height: 320vh;
-    }
-  }
   .lg\:h-screen {
     @media (width >= 64rem) {
       height: 100vh;
@@ -2639,11 +2640,6 @@
   .dark\:bg-\[\#25164A\] {
     @media (prefers-color-scheme: dark) {
       background-color: #25164A;
-    }
-  }
-  .dark\:bg-black {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-black);
     }
   }
   .dark\:bg-gray-700 {
