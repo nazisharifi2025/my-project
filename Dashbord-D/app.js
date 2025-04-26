@@ -34,6 +34,32 @@
     }
   );
   Counters.forEach((counter) => observer.observe(counter));
+  // dashbord3
+  const box = document.getElementById('expandBox');
+  const content = document.getElementById('innerContent');
+  const hLong = document.getElementById("h-long");
+  const margin = document.getElementById("mKam");
+  let isOpen = false;
+  box.addEventListener('click', () => {
+    isOpen = !isOpen;
+    if (isOpen) {
+      box.classList.add('h-[220vh]');
+      content.classList.remove('opacity-0', 'translate-y-5');
+      content.classList.add('opacity-100', 'translate-y-0');
+      hLong.classList.remove('h-[170vh]');
+      hLong.classList.add('h-[500vh]');
+      margin.classList.remove('-mt-[230%]');
+      margin.classList.add("mt-6");
+    } else {
+      box.classList.remove('h-[220vh]');
+      content.classList.add('opacity-0', 'translate-y-5');
+      content.classList.remove('opacity-100', 'translate-y-0');
+      hLong.classList.add('h-[170vh]');
+      hLong.classList.remove('h-[320vh]');
+      margin.classList.add('-mt-[230%]');
+      margin.classList.remove("mt-6");
+    }
+  });
   // counter1
   // const start = 0.2;
   // const end = 2;

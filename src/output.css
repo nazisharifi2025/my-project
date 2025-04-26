@@ -404,6 +404,9 @@
       max-width: 96rem;
     }
   }
+  .m-230 {
+    margin: calc(var(--spacing) * 230);
+  }
   .m-auto {
     margin: auto;
   }
@@ -485,11 +488,44 @@
   .-mt-7 {
     margin-top: calc(var(--spacing) * -7);
   }
+  .-mt-10 {
+    margin-top: calc(var(--spacing) * -10);
+  }
   .-mt-12 {
     margin-top: calc(var(--spacing) * -12);
   }
   .-mt-56 {
     margin-top: calc(var(--spacing) * -56);
+  }
+  .-mt-72 {
+    margin-top: calc(var(--spacing) * -72);
+  }
+  .-mt-96 {
+    margin-top: calc(var(--spacing) * -96);
+  }
+  .-mt-\[50\%\] {
+    margin-top: calc(50% * -1);
+  }
+  .-mt-\[120\%\] {
+    margin-top: calc(120% * -1);
+  }
+  .-mt-\[170\%\] {
+    margin-top: calc(170% * -1);
+  }
+  .-mt-\[190\%\] {
+    margin-top: calc(190% * -1);
+  }
+  .-mt-\[230\%\] {
+    margin-top: calc(230% * -1);
+  }
+  .-mt-\[800px\] {
+    margin-top: calc(800px * -1);
+  }
+  .-mt-\[2000px\] {
+    margin-top: calc(2000px * -1);
+  }
+  .-mt-\[2200px\] {
+    margin-top: calc(2200px * -1);
   }
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
@@ -791,6 +827,9 @@
   .h-\[175vh\] {
     height: 175vh;
   }
+  .h-\[180vh\] {
+    height: 180vh;
+  }
   .h-\[190vh\] {
     height: 190vh;
   }
@@ -809,11 +848,17 @@
   .h-\[220vh\] {
     height: 220vh;
   }
+  .h-\[230vh\] {
+    height: 230vh;
+  }
   .h-\[250px\] {
     height: 250px;
   }
   .h-\[250vh\] {
     height: 250vh;
+  }
+  .h-\[280vh\] {
+    height: 280vh;
   }
   .h-\[300px\] {
     height: 300px;
@@ -844,6 +889,9 @@
   }
   .h-\[450px\] {
     height: 450px;
+  }
+  .h-\[500vh\] {
+    height: 500vh;
   }
   .h-full {
     height: 100%;
@@ -1103,6 +1151,9 @@
   }
   .justify-evenly {
     justify-content: space-evenly;
+  }
+  .justify-start {
+    justify-content: flex-start;
   }
   .gap-0 {
     gap: calc(var(--spacing) * 0);
@@ -2384,6 +2435,16 @@
       margin-top: calc(var(--spacing) * 0);
     }
   }
+  .lg\:mt-6 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 6);
+    }
+  }
+  .lg\:mt-12 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 12);
+    }
+  }
   .lg\:mt-20 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 20);
@@ -2484,6 +2545,11 @@
       height: 310vh;
     }
   }
+  .lg\:h-\[320vh\] {
+    @media (width >= 64rem) {
+      height: 320vh;
+    }
+  }
   .lg\:h-screen {
     @media (width >= 64rem) {
       height: 100vh;
@@ -2517,6 +2583,11 @@
   .lg\:w-\[90\%\] {
     @media (width >= 64rem) {
       width: 90%;
+    }
+  }
+  .lg\:w-full {
+    @media (width >= 64rem) {
+      width: 100%;
     }
   }
   .lg\:flex-col {
