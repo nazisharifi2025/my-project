@@ -60,6 +60,22 @@
       margin.classList.remove("mt-6");
     }
   });
+  // div2
+  const divOne= document.getElementById('divOne');
+const divtow = document.getElementById('divtow');
+let isOpene = false;
+box.addEventListener('click', () => {
+  isOpene = !isOpene;
+  if (isOpene) {
+    divOne.classList.add('h-[60vh]');
+     divtow.classList.remove('opacity-0', 'translate-y-5');
+    divtow.classList.add('opacity-100', 'translate-y-0');
+  } else {
+    divOne.classList.remove('h-[60vh]');
+    divtow.classList.add('opacity-0', 'translate-y-5');
+    divtow.classList.remove('opacity-100', 'translate-y-0');
+  }
+});
   // counter1
   // const start = 0.2;
   // const end = 2;
