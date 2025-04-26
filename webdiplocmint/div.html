@@ -2,58 +2,45 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>دیو بازشونده</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
-
-    .container {
-      height: 100px;
-      overflow: hidden;
-      background-color: #e0e0ff;
-      transition: height 0.5s ease;
-      cursor: pointer;
-    }
-
-    .container.open {
-      height: 100vh;
-    }
-
-    .preview {
-      padding: 20px;
-      font-weight: bold;
-    }
-
-    .inner {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-      padding: 20px;
-    }
-
-    .container.open .inner {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <title>دیو بازشونده با تیلویند</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 flex justify-center items-start min-h-screen p-8">
 
-  <div class="container" id="box">
-    <div class="preview">👆 کلیک کن برای باز شدن</div>
-    <div class="inner">
-      <h2>این محتوا بعد از باز شدن نشون داده می‌شه 🎉</h2>
-      <p>هر چی دوست داشتی می‌تونی اینجا بذاری.</p>
+  <div id="expandBox"
+    class="w-full max-w-xl h-[100px] overflow-hidden bg-violet-200 rounded-xl transition-all duration-500 cursor-pointer">
+    
+    <!-- قسمت قابل مشاهده اولیه -->
+    <div class="p-4 font-bold text-lg">
+      👆 برای باز شدن کلیک کن
+    </div>
+
+    <!-- محتوای داخلی که بعد از باز شدن دیده میشه -->
+    <div id="innerContent"
+      class="opacity-0 translate-y-5 transition-all duration-500 p-4 space-y-2">
+      <h2 class="text-2xl font-bold text-violet-800">سلام 👋</h2>
+      <p class="text-gray-700">این بخش فقط بعد از باز شدن نمایش داده میشه.</p>
     </div>
   </div>
 
   <script>
-    const box = document.getElementById('box');
+    const box = document.getElementById('expandBox');
+    const content = document.getElementById('innerContent');
+
+    let isOpen = false;
 
     box.addEventListener('click', () => {
-      box.classList.toggle('open');
+      isOpen = !isOpen;
+
+      if (isOpen) {
+        box.classList.add('h-screen');
+        content.classList.remove('opacity-0', 'translate-y-5');
+        content.classList.add('opacity-100', 'translate-y-0');
+      } else {
+        box.classList.remove('h-screen');
+        content.classList.add('opacity-0', 'translate-y-5');
+        content.classList.remove('opacity-100', 'translate-y-0');
+      }
     });
   </script>
 
