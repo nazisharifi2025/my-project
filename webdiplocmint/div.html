@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expandable Div</title>
+  <style>
+    .container {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.5s ease;
+      background-color: #e0e0ff;
+    }
+
+    .container.open {
+      height: 100vh;
+    }
+
+    .inner {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      padding: 20px;
+    }
+
+    .container.open .inner {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .trigger {
+      cursor: pointer;
+      padding: 1rem;
+      background-color: #673ab7;
+      color: white;
+      margin-bottom: 1rem;
+      border: none;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="trigger">نمایش دیو</button>
+
+  <div class="container" id="box">
+    <div class="inner">
+      <h2>سلام! من ظاهر شدم 😄</h2>
+      <p>هر محتوایی می‌تونی اینجا بذاری.</p>
+    </div>
+  </div>
+
+  <script>
+    const trigger = document.querySelector('.trigger');
+    const box = document.getElementById('box');
+
+    trigger.addEventListener('click', () => {
+      box.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

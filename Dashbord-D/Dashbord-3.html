@@ -41,10 +41,13 @@
     <div class="lg:h-20 w-full bg-navar1 lg:px-2 md:px-9 lg:leading-20 lg:space-x-9 flex justify-between">
       <!-- responsiv ended -->
         <img src="img/logo_1.png" class="w-56 leading-20 my-3 h-12" alt="" />
-        <ul  id="mobileMenu" class="hidden space-x-6 flex-col gap-9  lg:flex lg:gap-0 lg:flex-row md:flex-col absolute top-24 right-0 lg:relative md:absolute lg:top-0 lg:right-16  h-screen  lg:h-20 lg:w-[30%] w-[30%] bg-navar1">
+        <ul  id="mobileMenu" class="hidden lg:space-x-6 space-x-3 flex-col gap-9  lg:flex lg:gap-0 lg:flex-row md:flex-col absolute top-24 right-0 lg:relative md:absolute lg:top-0 lg:right-16  h-screen  lg:h-20 lg:w-[30%] w-[50%] z-50 bg-navar1">
           <button id="menuClose" class="text-left lg:hidden block md:block">
             <span class="material-symbols-outlined text-white text-2xl">close</span>
             </button>
+            <div class="border-b border-violet-900 pb-3 w-[90%] mr-3.5">
+            <input type="text" placeholder="Search entre store..." class="h-12 mr-7 w-full outline-0 bg-violet-800 lg:hidden block">
+          </div>
           <li class="relative group">
             <a href="" class="flex ">Demos
             <span class="material-symbols-outlined mt-8 md:hidden hidden lg:block" style="font-size: 19">
@@ -69,10 +72,10 @@
               <ul class="bg-navar1 w-[900px] absolute top-18 left-0 h-[90vh] rounded-b-lg">
                 <table class="mr-14">
                   <tr>
-                    <th class="w-[20%] mx-14 border-b border-b-butten text-center">Set Started1</th>
-                    <th class="w-[20%] mx-14 border-b border-b-butten text-center">Set Started2</th>
-                    <th class="w-[20%] mx-14 border-b border-b-butten text-center">Set Started3</th>
-                    <th class="w-[20%] mx-14 border-b border-b-butten text-center">Set Started4</th>
+                    <th class="w-[20%] mx-14 border-b border-b-violet-900 text-center">Set Started1</th>
+                    <th class="w-[20%] mx-14 border-b border-b-violet-900 text-center">Set Started2</th>
+                    <th class="w-[20%] mx-14 border-b border-b-violet-900 text-center">Set Started3</th>
+                    <th class="w-[20%] mx-14 border-b border-b-violet-900 text-center">Set Started4</th>
                   </tr>
                   <tr class="font-extralight text-[17px] text-center">
                     <td>About</td>
@@ -127,9 +130,9 @@
             <ul class="bg-navar1 w-[1000px] absolute top-18 -left-72 h-[110vh] rounded-b-lg">
               <table class="flex mx-12">
                 <tr>
-                  <th class="w-[30%] mx-14 border-b border-b-butten text-center">Set Started1</th>
-                  <th class="w-[30%] mx-14 border-b border-b-butten text-center">Set Started2</th>
-                  <th class="w-[30%] mx-14 border-b border-b-butten text-center">Set Started3</th>
+                  <th class="w-[30%] mx-14 border-b border-b-violet-900 text-center">Set Started1</th>
+                  <th class="w-[30%] mx-14 border-b border-b-violet-900 text-center">Set Started2</th>
+                  <th class="w-[30%] mx-14 border-b border-b-violet-900 text-center">Set Started3</th>
                 </tr>
                 <tr class="font-extralight text-[17px] text-center">
                   <td>About</td>
@@ -177,18 +180,18 @@
               stat_minus_1
             </span> </a>
             <ul class="h-56 w-52 bg-navar1 absolute top-20 hidden group-hover:hidden lg:group-hover:block">
-              <li class="-mt-6 flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-butten">Admin <span class="material-symbols-outlined mt-6">
+              <li class="-mt-6 flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-violet-900">Admin <span class="material-symbols-outlined mt-6">
                 chevron_right
                 </span></li>
-              <li class=" flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-butten">Anistractor<span class="material-symbols-outlined mt-6">
+              <li class=" flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-violet-900">Anistractor<span class="material-symbols-outlined mt-6">
                 chevron_right
                 </span></li>
-              <li class=" flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-butten">Student<span class="material-symbols-outlined mt-6">
+              <li class=" flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-violet-900">Student<span class="material-symbols-outlined mt-6">
                 chevron_right
                 </span></li>
             </ul>
           </li>
-          <li class="relative group">
+          <li class="relative group border-b border-violet-900 pb-6 lg:border-0 lg:pb-0">
             <a href="" class="flex"
               >eCommerce
               <span
@@ -199,15 +202,17 @@
                 stat_minus_1
               </span></a>
               <ul class="h-60 w-52 bg-navar1 absolute top-20 hidden group-hover:hidden lg:group-hover:block">
-                <li class="-mt-6 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Shop</li>
-                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Prouduct Detaiel</li>
-                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Cart</li>
-                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Checkout</li>
-                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Wishlist</li>
+                <li class="-mt-6 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-violet-900 hover:pl-2">Shop</li>
+                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-violet-900 hover:pl-2">Prouduct Detaiel</li>
+                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-violet-900 hover:pl-2">Cart</li>
+                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-violet-900 hover:pl-2">Checkout</li>
+                <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-violet-900 hover:pl-2">Wishlist</li>
   
               </ul>
             </a>
           </li>
+          <h1 class="h-11 w-[90%] text-2xl pb-4 border-b-2 border-violet-900 lg:hidden block">My Acount </h1>
+          <img src="img/Screenshot 2025-04-19 101314.png" class="block lg:hidden" alt="">
         </ul>
       <!--  -->
       <div class="flex space-x-6 leading-20 py-3">
@@ -249,32 +254,32 @@
     <!-- endedd hero -->  
      <!-- Stert -->
       <div class=" lg:h-[310vh] h-[320vh] md:h-[280vh] w-[90%] lg:flex lg:space-x-8 lg:flex-row flex-col gap-10 mx-auto">
-        <div class="lg:w-[60%] w-full mt-10 h-[220vh] border border-butten rounded-lg bg-vNav">
-          <h1 class="pb-3 pl-5 mt-4 mx-auto font-bold text-2xl border-4 rounded-2xl rounded-b-none border-butten w-[90%]">Course Info <span class="material-symbols-outlined float-right pr-3 mt-2">
+        <div class="lg:w-[60%] w-full mt-10 h-[220vh] border border-violet-900 rounded-lg bg-vNav">
+          <h1 class="pb-3 pl-5 mt-4 mx-auto font-bold text-2xl border-4 rounded-2xl rounded-b-none border-violet-900 w-[90%]">Course Info <span class="material-symbols-outlined float-right pr-3 mt-2">
             stat_minus_1
             </span></h1>
             <div class="w-[90%] lg:h-[175vh] h-[140vh] bg-navar1 mt-8 mx-auto">
               <h1 class=" font-bold text-[21px] mx-4 my-4 mt-4">Course Title</h1>
               <input type="text" placeholder="Course Title" class="w-[90%] h-14
-               bg-vNav border-2 border-butten rounded-lg font-bold ml-6">
+               bg-vNav border-2 border-violet-900 rounded-lg font-bold ml-6">
               <h1 class=" font-bold text-[21px] mx-4 my-4 mt-4">Course Slug</h1>
               <input type="text" placeholder="Course Slog" class="w-[90%] h-14
-               bg-vNav border-2 border-butten rounded-lg font-bold ml-6">
+               bg-vNav border-2 border-violet-900 rounded-lg font-bold ml-6">
             <h1 class=" font-bold text-[21px] mx-4 my-4 mt-4">Free Regular Price ($)</h1>
             <input type="text" placeholder="Free Regular Price ($)" class="w-[90%] h-14
-             bg-vNav border-2 border-butten rounded-lg font-bold ml-6">
+             bg-vNav border-2 border-violet-900 rounded-lg font-bold ml-6">
              <p class="mt-5"><span class="material-symbols-outlined mt-2" style="font-size: 15px;">
               info
               </span>The Course Price Includes Your Author Fee.</p>
           <h1 class=" font-bold text-[21px] mx-4 my-4 mt-4">Discounted Price ($)</h1>
           <input type="text" placeholder="Discounted Price ($)" class="w-[90%] h-14
-           bg-vNav border-2 border-butten rounded-lg font-bold ml-6">
+           bg-vNav border-2 border-violet-900 rounded-lg font-bold ml-6">
            <p class="mt-5 font-bold"><span class="material-symbols-outlined mt-2" style="font-size: 15px;">
             info
             </span>The Course Price Includes Your Author Fee.</p>
             <div class="text-black font-bold flex space-x-4 justify-between mx-5 w-[90%] mt-6">
               <select name="" id="" class="w-[50%] h-12 rounded-[12px]
-               outline-0 hover:border-2 hover: border-butten bg-white ">
+               outline-0 hover:border-2 hover: border-violet-900 bg-white ">
                 <option value="All">All</option>
                 <option value="All">Web Dezing</option>
                 <option value="All">Grafic</option>
@@ -286,7 +291,7 @@
                 <option value="All">php Development</option>
               </select>
               <select name="" id="" class="w-[50%] h-12 rounded-[12px]
-               outline-0 hover:border-2 hover: border-butten bg-white ">
+               outline-0 hover:border-2 hover: border-violet-900 bg-white ">
                 <option value="All">All</option>
                 <option value="All">Web Dezing</option>
                 <option value="All">Grafic</option>
@@ -303,7 +308,7 @@
         <button class="h-14 rounded-lg ml-9 w-36 mt-3 bg-violet-900
          text-white font-bold text-center py-4 px-6">Update Info</button> 
        </div>
-       <div class="h-20 w-full bg-vNav border-2 border-butten mt-9  px-6">
+       <div class="h-20 w-full bg-vNav border-2 border-violet-900 mt-9  px-6">
         <div class="hover:h-14 hover:w-[80%] hover:border-4 hover:border-butten flex 
         hover:text-center hover:mx-auto justify-between hover:mt-3 hover:leading-20">
         <h1 class="font-bold text-2xl ml-9 pt-3">Course Intro Video</h1>
@@ -312,7 +317,7 @@
           </span>
         </div>
        </div>
-       <div class="h-20 w-full bg-vNav border-2 border-butten mt-9  px-6">
+       <div class="h-20 w-full bg-vNav border-2 border-violet-900 mt-9  px-6">
         <div class="hover:h-14 hover:w-[80%] hover:border-4 hover:border-butten flex 
         hover:text-center hover:mx-auto justify-between hover:mt-3 hover:leading-20">
         <h1 class="font-bold text-2xl ml-9 pt-3">Course Boilder</h1>
@@ -321,7 +326,7 @@
           </span>
         </div>
        </div>
-       <div class="h-20 w-full bg-vNav border-2 border-butten mt-9  px-6">
+       <div class="h-20 w-full bg-vNav border-2 border-violet-900 mt-9  px-6">
         <div class="hover:h-14 hover:w-[80%] hover:border-4 hover:border-butten flex 
         hover:text-center hover:mx-auto justify-between hover:mt-3 hover:leading-20">
         <h1 class="font-bold text-2xl ml-9 pt-3">Additional Information</h1>
@@ -330,7 +335,7 @@
           </span>
         </div>
        </div>
-       <div class="h-20 w-full bg-vNav border-2 border-butten mt-9  px-6">
+       <div class="h-20 w-full bg-vNav border-2 border-violet-900 mt-9  px-6">
         <div class="hover:h-14 hover:w-[80%] hover:border-4 hover:border-butten flex 
         hover:text-center hover:mx-auto justify-between hover:mt-3 hover:leading-20">
         <h1 class="font-bold text-2xl ml-9 pt-3">Certificite Template</h1>
@@ -347,7 +352,7 @@
       </div>
         </div>
         <!-- div1 -->
-        <div class="lg:w-[30%] w-full px-12 lg:h-[130vh] h-[90vh] md:h-[50vh] md:mt-6 md:text-xl bg-vNav border-2 border-butten mt-10 flex flex-col gap-5">
+        <div class="lg:w-[30%] w-full px-12 lg:h-[130vh] h-[90vh] md:h-[50vh] md:mt-6 md:text-xl bg-vNav border-2 border-violet-900 mt-10 flex flex-col gap-5">
           <h1 class="font-bold text-3xl ml-3">Course Upload Tips</h1>
           <p class="mt-1 ml-2 text-[20px]"><span class="material-symbols-outlined text-green-700"
              style="font-size: 19px;">
@@ -383,7 +388,7 @@
     <!-- footer stard -->
     <footer class="lg:h-screen h-[170vh] md:h-[140vh] bg-vNav">
       <div
-        class="border-b border-b-butten pb-4 mx-auto w-[80%] lg:h-36 h-64 lg:flex lg:justify-between lg:flex-row flex-col px-5"
+        class="border-b border-b-violet-900 pb-4 mx-auto w-[80%] lg:h-36 h-64 lg:flex lg:justify-between lg:flex-row flex-col px-5"
       >
         <img src="img/logo_2.png" class="h-20 w-44 my-10 mx-12 lg:mx-0" alt="" />
         <div class="leading-36 h-36 relative -ml-12 lg:-ml-0 md:ml-14">
@@ -400,7 +405,7 @@
           </button>
         </div>
       </div>
-      <div class="flex lg:flex-row flex-col w-[90%] justify-center space-x-20 border-b border-b-butten pb-5 mx-auto mt-12">
+      <div class="flex lg:flex-row flex-col w-[90%] justify-center space-x-20 border-b border-b-violet-900 pb-5 mx-auto mt-12">
         <div class="flex flex-col gap-7 lg:w-[20%] w-full">
           <h1 class="font-bold text-2xl">About Us</h1>
           <p class="text-gray-400 font-bold">
