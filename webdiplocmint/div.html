@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>Expandable Div</title>
+  <title>دیو بازشونده</title>
   <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
     .container {
-      height: 0;
+      height: 100px;
       overflow: hidden;
-      transition: height 0.5s ease;
       background-color: #e0e0ff;
+      transition: height 0.5s ease;
+      cursor: pointer;
     }
 
     .container.open {
       height: 100vh;
+    }
+
+    .preview {
+      padding: 20px;
+      font-weight: bold;
     }
 
     .inner {
@@ -26,34 +37,22 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    .trigger {
-      cursor: pointer;
-      padding: 1rem;
-      background-color: #673ab7;
-      color: white;
-      margin-bottom: 1rem;
-      border: none;
-      font-size: 1.2rem;
-    }
   </style>
 </head>
 <body>
 
-  <button class="trigger">نمایش دیو</button>
-
   <div class="container" id="box">
+    <div class="preview">👆 کلیک کن برای باز شدن</div>
     <div class="inner">
-      <h2>سلام! من ظاهر شدم 😄</h2>
-      <p>هر محتوایی می‌تونی اینجا بذاری.</p>
+      <h2>این محتوا بعد از باز شدن نشون داده می‌شه 🎉</h2>
+      <p>هر چی دوست داشتی می‌تونی اینجا بذاری.</p>
     </div>
   </div>
 
   <script>
-    const trigger = document.querySelector('.trigger');
     const box = document.getElementById('box');
 
-    trigger.addEventListener('click', () => {
+    box.addEventListener('click', () => {
       box.classList.toggle('open');
     });
   </script>
