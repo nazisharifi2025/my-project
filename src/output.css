@@ -1051,6 +1051,11 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .translate-5 {
+    --tw-translate-x: calc(var(--spacing) * 5);
+    --tw-translate-y: calc(var(--spacing) * 5);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .translate-7 {
     --tw-translate-x: calc(var(--spacing) * 7);
     --tw-translate-y: calc(var(--spacing) * 7);
