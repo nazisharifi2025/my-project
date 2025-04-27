@@ -748,6 +748,9 @@
   .h-\[80vh\] {
     height: 80vh;
   }
+  .h-\[90\%\] {
+    height: 90%;
+  }
   .h-\[90vh\] {
     height: 90vh;
   }
@@ -855,6 +858,9 @@
   }
   .h-\[500vh\] {
     height: 500vh;
+  }
+  .h-\[905\%\] {
+    height: 905%;
   }
   .h-fit {
     height: fit-content;
