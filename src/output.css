@@ -712,6 +712,9 @@
   .h-\[15vh\] {
     height: 15vh;
   }
+  .h-\[16\] {
+    height: 16;
+  }
   .h-\[30vh\] {
     height: 30vh;
   }
@@ -774,6 +777,9 @@
   }
   .h-\[140vh\] {
     height: 140vh;
+  }
+  .h-\[145\] {
+    height: 145;
   }
   .h-\[145vh\] {
     height: 145vh;
@@ -2074,6 +2080,13 @@
         --tw-scale-y: 110%;
         --tw-scale-z: 110%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:cursor-pointer {
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
       }
     }
   }
