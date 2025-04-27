@@ -63,17 +63,70 @@
   // div2
   const divOne= document.getElementById('divOne');
 const divtow = document.getElementById('divtow');
+const dives = document.getElementById("dives");
 let isOpene = false;
-box.addEventListener('click', () => {
+divOne.addEventListener('click', () => {
   isOpene = !isOpene;
   if (isOpene) {
-    divOne.classList.add('h-[60vh]');
+    dives.classList.add('h-[60vh]');
      divtow.classList.remove('opacity-0', 'translate-y-5');
     divtow.classList.add('opacity-100', 'translate-y-0');
   } else {
-    divOne.classList.remove('h-[60vh]');
+    dives.classList.remove('h-[60vh]');
     divtow.classList.add('opacity-0', 'translate-y-5');
     divtow.classList.remove('opacity-100', 'translate-y-0');
+  }
+});
+// div3
+  // div2
+  const div3= document.getElementById('div3');
+const divtree = document.getElementById('divtree');
+const butten = document.getElementById("butten");
+let isOpena = false;
+divtree.addEventListener('click', () => {
+  isOpena = !isOpena;
+  if (isOpena) {
+    div3.classList.add('h-[30vh]');
+     butten.classList.remove('opacity-0', 'translate-y-5');
+    butten.classList.add('opacity-100', 'translate-y-0');
+  } else {
+    div3.classList.remove('h-[30vh]');
+    butten.classList.add('opacity-0', 'translate-y-5');
+    butten.classList.remove('opacity-100', 'translate-y-0');
+  }
+});
+// div4
+const clickme= document.getElementById('clickme');
+const hBz = document.getElementById('hBz');
+const opicite = document.getElementById("opicite");
+let isOpenes = false;
+clickme.addEventListener('click', () => {
+  isOpenes = !isOpenes;
+  if (isOpenes) {
+    hBz.classList.add('h-[145vh]');
+     opicite.classList.remove('opacity-0', 'translate-y-5');
+    opicite.classList.add('opacity-100', 'translate-y-0');
+  } else {
+    hBz.classList.remove('h-[145vh]');
+    opicite.classList.add('opacity-0', 'translate-y-5');
+    opicite.classList.remove('opacity-100', 'translate-y-0');
+  }
+});
+// div4
+const clicktome= document.getElementById('clictome');
+const hightes = document.getElementById('hightes');
+const opisty0 = document.getElementById("opisty0");
+let isOpenea = false;
+clicktome.addEventListener('click', () => {
+  isOpenea = !isOpenea;
+  if (isOpenea) {
+    hightes.classList.add('h-[145vh]');
+     opisty0.classList.remove('opacity-0', 'translate-y-5');
+    opisty0.classList.add('opacity-100', 'translate-y-0');
+  } else {
+    hightes.classList.remove('h-[145vh]');
+    opisty0.classList.add('opacity-0', 'translate-y-5');
+    opisty0.classList.remove('opacity-100', 'translate-y-0');
   }
 });
   // counter1
