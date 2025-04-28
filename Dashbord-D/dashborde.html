@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <script src="anim.js" defer></script>
+    <link rel="stylesheet" href="../src/output.css" />
+    <style>
+      .fade-rotate-init {
+        opacity: 0;
+        transform: perspective(1000px) rotateY(90deg);
+        transition: all 4s ease;
+      }
+
+      .fade-rotate-show {
+        opacity: 1;
+        transform: perspective(1000px) rotateY(0deg);
+      }
+    </style>
+  </head>
+  <body
+    class="w-full text-black bg-white dark:bg-[#25164A] dark:text-white transition-colors duration-500"
+  >
+    <button
+      id="themeToggle"
+      class="h-16 w-16 bg-vNav text-center rounded-r-none shadow-2xl shadow-gray-400 rounded-lg absolute top-36 right-0"
+    >
+      <span class="material-symbols-outlined" id="moonIcon">nightlight</span>
+      <span class="material-symbols-outlined hidden" id="sunIcon">sunny</span>
+    </button>
+    <!-- lighte mode indedd -->
+    <div class="hidden justify-between h-12 bg-navg w-full leading-12 pl-3 lg:flex md:hidden">
+        <p>Call Us: +1 800 123 456 789 - Mail Us: Itcroc@mail.com</p>
+        <div class="flex">
+          <p>
+            <span class="material-symbols-outlined" style="font-size: 18px">
+              location_on
+            </span>
+            684 West College St. Sun City, USA
+          </p>
+          <img src="img/Screenshot 2025-04-19 101314.png" class="my-2" alt="" />
+        </div>
+        </div>
+      <!-- ended nav1 -->
+      <div class="lg:h-20 w-full bg-navar1 lg:px-2 md:px-9 lg:leading-20 lg:space-x-9 flex justify-between">
+        <!-- responsiv ended -->
+          <img src="img/logo_1.png" class="w-56 leading-20 my-3 h-12" alt="" />
+          <ul  id="mobileMenu" class="hidden lg:space-x-6 space-x-3 flex-col gap-9  lg:flex lg:gap-0 lg:flex-row md:flex-col absolute top-24 right-0 lg:relative md:absolute lg:top-0 lg:right-16  h-screen  lg:h-20 lg:w-[30%] w-[50%] z-50 bg-navar1">
+            <button id="menuClose" class="text-left lg:hidden block md:block">
+              <span class="material-symbols-outlined text-white text-2xl">close</span>
+              </button>
+              <div class="border-b border-violet-900 pb-3 w-[90%] mr-3.5">
+              <input type="text" placeholder="Search entre store..." class="h-12 mr-7 w-full outline-0 bg-violet-800 lg:hidden block">
+            </div>
+            <li class="relative group">
+              <a href="" class="flex ">Demos
+              <span class="material-symbols-outlined mt-8 md:hidden hidden lg:block" style="font-size: 19">
+                stat_minus_1
+              </span></a>
+              <div class="hidden group-hover:hidden lg:group-hover:block">
+              <ul class="bg-navar1 w-[1000px] -ml-48 absolute top-14 h-32 justify-between items-center px-2 flex gap-3 ">
+                <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-violet-950  shadow text-center shadow-gray-100">Light</li>
+                <li class="w-[50%] h-16 bg-navar1 rounded-b-lg hover:border-t-8 hover:border-t-violet-950 shadow text-center shadow-gray-100">Dark</li>
+              </ul>
+            </div>
+            </li>
+            <li class="relative  group">
+              <a href="" class="flex">Pages
+              <span
+                class="material-symbols-outlined mt-8 lg:block md:hidden hidden"
+                style="font-size: 20px"
+              >
+                stat_minus_1
+              </span> </a>
+              <div class="hidden group-hover:hidden lg:group-hover:block">
+                <ul class="bg-navar1 w-[900px] absolute top-18 left-0 h-[90vh] rounded-b-lg">
+                  <table class="mr-14">
+                    <tr>
+                      <th class="w-[20%] mx-14 border-b border-b-butten text-center">Set Started1</th>
+                      <th class="w-[20%] mx-14 border-b border-b-butten text-center">Set Started2</th>
+                      <th class="w-[20%] mx-14 border-b border-b-butten text-center">Set Started3</th>
+                      <th class="w-[20%] mx-14 border-b border-b-butten text-center">Set Started4</th>
+                    </tr>
+                    <tr class="font-extralight text-[17px] text-center">
+                      <td>About</td>
+                      <td>Error 404</td>
+                      <td>Meeting Details(Dark)</td>
+                      <td>Term And Conditio (Dark)</td>
+                    </tr>
+                    <tr class="font-extralight text-[17px] text-center">
+                      <td>About Darck</td>
+                      <td>Error Darck</td>
+                      <td>Login</td>
+                      <td>Contact</td>
+                    </tr>
+                    <tr class="font-extralight text-[17px] text-center">
+                      <td>Blog</td>
+                      <td>Evint Detaiel</td>
+                      <td>Login Dark</td>
+                      <td>Contact Dark</td>
+                    </tr>
+                    <tr class="font-extralight text-[17px] text-center">
+                      <td>Blog Darck</td>
+                      <td>Zoom</td>
+                      <td>Maintanins</td>
+                      <td>Success Storis</td>
+                    </tr>
+                    <tr class="font-extralight text-[17px] text-center">
+                      <td>Blog Detailes</td>
+                      <td>Zoom Meting Darck</td>
+                      <td>Maintanins (Dark)</td>
+                      <td>Success Storis (Dark)</td>
+                    </tr>
+                    <tr class="font-extralight text-[17px] text-center">
+                      <td>Blog Detaiel (Dark)</td>
+                      <td>Zoom meting Detailes</td>
+                      <td>Term & Conditon</td>
+                      <td>Work Polici</td>
+                    </tr>
+                  </table>
+                </ul>
+              </div>
+            </li>
+            <li class="relative group">
+              <a href="" class="flex">Courses 
+              <span
+                class="material-symbols-outlined mt-8 lg:block md:hidden hidden"
+                style="font-size: 20px"
+              >
+                stat_minus_1
+              </span></a>
+            <div class="hidden group-hover:hidden lg:group-hover:block">
+              <div class="flex space-x-2">
+              <ul class="bg-navar1 w-[1000px] absolute top-18 -left-72 h-[110vh] rounded-b-lg">
+                <table class="flex mx-12">
+                  <tr>
+                    <th class="w-[30%] mx-14 border-b border-b-butten text-center">Set Started1</th>
+                    <th class="w-[30%] mx-14 border-b border-b-butten text-center">Set Started2</th>
+                    <th class="w-[30%] mx-14 border-b border-b-butten text-center">Set Started3</th>
+                  </tr>
+                  <tr class="font-extralight text-[17px] text-center">
+                    <td>About</td>
+                    <td>Error 404</td>
+                    <td>Meeting Details(Dark)</td>
+                  </tr>
+                  <tr class="font-extralight text-[17px] text-center">
+                    <td>About Darck</td>
+                    <td>Error Darck</td>
+                    <td>Login</td>
+                  </tr>
+                  <tr class="font-extralight text-[17px] text-center">
+                    <td>Blog</td>
+                    <td>Evint Detaiel</td>
+                    <td>Login Dark</td>
+                  </tr>
+                  <tr class="font-extralight text-[17px] text-center">
+                    <td>Blog Darck</td>
+                    <td>Zoom</td>
+                    <td>Maintanins</td>
+                  </tr>
+                  <tr class="font-extralight text-[17px] text-center">
+                    <td>Blog Detailes</td>
+                    <td>Zoom Meting Darck</td>
+                    <td>Maintanins (Dark)</td>
+                  </tr>
+                  <tr class="font-extralight text-[17px] text-center">
+                    <td>Blog Detaiel (Dark)</td>
+                    <td>Zoom meting Detailes</td>
+                    <td>Term & Conditon</td>
+                  </tr>
+                  <img src="img/mega_menu_1.png" class="float-right mr-12 my-40" alt="">
+                </table>
+              </ul>
+      
+            </div>
+            </div>
+          </li>
+            <li  class="relative group">
+              <a href="" class="flex">Dashboard 
+              <span
+                class="material-symbols-outlined mt-8 lg:block md:hidden hidden"
+                style="font-size: 20px"
+              >
+                stat_minus_1
+              </span> </a>
+              <ul class="h-56 w-52 bg-navar1 absolute top-20 hidden group-hover:hidden lg:group-hover:block">
+                <li class="-mt-6 flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-butten">Admin <span class="material-symbols-outlined mt-6">
+                  chevron_right
+                  </span></li>
+                <li class=" flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-butten">Anistractor<span class="material-symbols-outlined mt-6">
+                  chevron_right
+                  </span></li>
+                <li class=" flex justify-between px-4 hover:bg-nav2 hover:border-l-4 hover:border-butten">Student<span class="material-symbols-outlined mt-6">
+                  chevron_right
+                  </span></li>
+              </ul>
+            </li>
+            <li class="relative group border-b border-violet-900 pb-6 lg:border-0 lg:pb-0">
+              <a href="" class="flex"
+                >eCommerce
+                <span
+                  class="material-symbols-outlined mt-8 lg:block md:hidden hidden
+                  "
+                  style="font-size: 20px"
+                >
+                  stat_minus_1
+                </span></a>
+                <ul class="h-60 w-52 bg-navar1 absolute top-20 hidden group-hover:hidden lg:group-hover:block">
+                  <li class="-mt-6 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Shop</li>
+                  <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Prouduct Detaiel</li>
+                  <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Cart</li>
+                  <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Checkout</li>
+                  <li class="-mt-7 pl-2 hover:bg-nav2 hover:border-l-4 hover:border-butten hover:pl-2">Wishlist</li>
+      
+                </ul>
+              </a>
+            </li>
+            <h1 class="h-11 w-[90%] text-2xl pb-4 border-b-2 border-violet-900 lg:hidden block">My Acount </h1>
+            <img src="img/Screenshot 2025-04-19 101314.png" class="block lg:hidden" alt="">
+          </ul>
+      
+          <!-- navar2 ended -->
+          <div class="flex space-x-6 leading-20 py-3">
+            <span class="material-symbols-outlined mt-3 hover:cursor-pointer hover:text-pink-700" style="font-size: 30px">
+              shopping_cart
+            </span>
+            <button id="menuToggle" class="md:block block lg:hidden">
+              <span class="material-symbols-outlined text-white text-3xl">menu</span>
+            </button>
+           <a href="person.html"><span
+              class="material-symbols-outlined border rounded-[6px] w-12 text-center pt-2 h-12 md:hidden hidden lg:block hover:bg-violet-700"
+              style="font-size: 30px"
+            >
+              person
+            </span></a> 
+            <button
+              class="h-12 w-28 rounded-[6px] bg-violet-900 text-center text-[18px] hover:bg-indigo-950 hover:border hover:border-violet-900 leading-4 hidden md:hidden lg:block"
+            >
+              Get Start
+            </button>
+          </div>
+        </div>
+      <!-- nave2 ended -->
+          <!-- navar endind -->
+          <!-- start pro -->
+          <div
+            class="flex flex-col lg:flex-row lg:h-60 h-96 w-[90%] gap-4 lg:gap-0 lg:space-x-9 lg:justify-between justify-evenly   lg:px-16 px-5  rounded-[12px] bg-profiel leading-60 my-1 mx-auto"
+          >
+            <div class="flex space-x-3 py-10">
+              <img
+                src="img/dashbord__2.jpg"
+                class="h-[140px] w-[140px] border-2 border-white p-2 rounded-full"
+                alt=""
+              />
+              <div class="flex flex-col space-x-2 font-bold my-1">
+                <h2 class="text-2xl">Hello</h2>
+                <h1 class="text-3xl">Michle Obema</h1>
+              </div>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 lg:space-x-5  lg:mt-0">
+            <div class="flex lg:h-10 h-5 flex-col justify-center lg:mt-20 items-center">
+              <div>
+                <span class="material-symbols-outlined"> star </span>
+                <span class="material-symbols-outlined"> star </span>
+                <span class="material-symbols-outlined"> star </span>
+                <span class="material-symbols-outlined"> star </span>
+              </div>
+              <span class="-mt-56">4.0 (120 Reviews)</span>
+            </div>
+            <button
+              class="text-2xl h-14 lg:my-20 my-0 md:mx-auto ml-7 lg:ml-0 rounded-[8px] w-72 bg-violet-900 hover:bg-nav2"
+            >
+              <a href="dashbordejs.html">Creat a New Course</a>
+              <span class="material-symbols-outlined"> arrow_forward </span>
+            </button>
+          </div>
+          </div>
+          <!-- endedd -->
+          <!-- vnav and page -->
+          <div class="w-[90%] mx-auto lg:h-[250vh] md:h-[305vh] h-[420vh] mt-12 flex flex-col gap-4 lg:justify-between lg:flex-row lg:space-x-4">
+            <!-- vnav -->
+            <div
+              class="lg:w-[35%] w-full lg:h-[210vh] md:h-[115vh] h-[130vh] border border-violet-950 bg-vNav flex flex-col gap-7 rounded-md"
+            >
+              <div class="mx-12 my-9">
+                <p class="text-[23px]">Welcome, Micle</p>
+                <p class="text-[23px]">Obema</p>
+              </div>
+              <div>
+                <ul class="flex flex-col gap-6 text-[24px]">
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900 text-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2">home </span>
+                    <a href="" class="">Dashboard</a>
+                  </li>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2">person </span>
+                    <a href="" class="">My Profiel</a>
+                  </li>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2">
+                      import_contacts</span
+                    >
+                    <a href="" class="">Message</a>
+                  </li>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2"> bookmark </span>
+                    <a href="" class="">WeshList</a>
+                  </li>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2"> star </span>
+                    <a href="" class="">Reviews</a>
+                  </li>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2"> help</span>
+                    <a href="" class="">My Quiz Attempts</a>
+                  </li>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2">receipt_long </span>
+                    <a href="" class="">Order Hestory</a>
+                  </li>
+                  <h1 class="font-bold mx-6">My Course</h1>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2">mimo</span>
+                    <a href="" class="">My Course</a>
+                  </li>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2">volume_up </span>
+                    <a href="" class="">Announcments</a>
+                  </li>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2"> chat_bubble </span>
+                    <a href="" class="">Quiz Attempt</a>
+                  </li>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2"> volume_up </span>
+                    <a href="" class="">Assignments</a>
+                  </li>
+                  <h1 class="font-bold mx-6">User</h1>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2"> settings </span>
+                    <a href="" class="">settings</a>
+                  </li>
+                  <li
+                    class="w-[90%] flex space-x-4 border-b mx-auto border-violet-900  pb-1 hover:text-violet-900"
+                  >
+                    <span class="material-symbols-outlined mt-2">volume_up </span>
+                    <a href="" class="">Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- vnav endedd -->
+             <div class="w-full mx-auto flex flex-col gap-6">
+            <div class="bg-vNav border-violet-950 rounded-2xl lg:w-[90%] w-full lg:h-[140vh]  flex flex-col gap-3 lg:gap-0 h-[170vh] md:h-[90vh] border">
+              <h1
+                class="mt-12 font-bold text-3xl border-b border-b-violet-900 pb-4 mx-auto w-[80%]"
+              >
+                Dashboard
+              </h1>
+              <div class="flex w-[90%] justify-between lg:flex-row flex-col md:flex-row px-7 gap-4 mx-auto">
+                <div class="flex flex-col gap-3 lg:w-[60%] w-[95%] md:w-[60%]  mt-8">
+                  <div
+                    class="w-full h-52 border border-violet-900 rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
+                  >
+                    <img src="img/counter__1.png" class="h-20 w-20" alt="" />
+                    <div class="font-bold text-2xl">
+                      <div class="flex"><h1 class="font-bold text-4xl" data-target="27">0</h1><span class="font-bold text-4xl">+</span></div>
+                      <p>Enrolled Courses</p>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full h-52 border border-violet-900 rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
+                  >
+                    <img src="img/counter__3.png" class="h-20 w-20" alt="" />
+                    <div class="font-bold text-2xl">
+                      <div class="flex"><h1  id="counter" data-target="3" class="font-bold text-4xl">0</h1><span class="font-bold text-4xl">k</span></div>
+                      <p>Complete Courses</p>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full h-52 border border-violet-900  rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
+                  >
+                    <img src="img/counter__3 (1).png" class="h-20 w-20" alt="" />
+                    <div class="font-bold text-2xl">
+                      <div class="flex"><h1 id="counter2" data-target="10" class="font-bold text-4xl">0</h1><span class="font-bold text-4xl">k</span></div>
+                      <p>Total Students</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-3  lg:w-[60%] w-[95%] md:w-[60%]  mt-8">
+                  <div
+                    class="w-full h-52 border border-violet-900  rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
+                  >
+                    <img src="img/counter__2.png" class="h-20 w-20" alt="" />
+                    <div class="font-bold text-2xl">
+                      <div class="flex"><h1 id="counter3" class="font-bold text-4xl" data-target="8">0</h1><span class="font-bold text-4xl">+</span></div>
+                      <p>Active Courses</p>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full h-52 border border-violet-900  rounded-2xl flex justify-center space-x-4 items-center my-auto mx-auto"
+                  >
+                    <img src="img/counter__4.png" class="h-20 w-20" alt="" />
+                    <div class="font-bold text-2xl">
+                      <div class="flex"><h1 id="counter4" class="font-bold text-4xl" data-target="8">0</h1><span class="font-bold text-4xl">+</span></div>
+                      <p>Total Courses</p>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full h-52 border border-violet-900  rounded-2xl flex justify-center items-center space-x-4 my-auto mx-auto"
+                  >
+                    <img src="img/counter__4 (1).png" class="h-20 w-20" alt="" />
+                    <div class="font-bold text-2xl">
+                      <div class="flex"><h1 id="counter5" class="font-bold text-4xl" data-target="24000"></h1><span class="font-bold text-4xl">+</span></div>
+                      <p>Total Earning</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <!-- counter ended -->
+              <div
+                class="bg-vNav lg:h-[80vh] h-[100vh]  rounded-2xl border border-violet-900  w-full lg:w-[90%] "
+              >
+                <div
+                  class="mt-12 border-b border-b-violet-900  pb-4 mx-auto w-[80%] flex justify-between"
+                >
+                  <h1 class="font-bold text-3xl">Dashboard</h1>
+                  <p class="text-2xl">Learn more....</p>
+                </div>
+                <div class="flex lg:flex-row lg:space-x-24 flex-col gap-6 mt-11 justify-center items-center">
+                  <ul
+                    class="flex flex-col gap-5 font-bold items-center justify-center"
+                  >
+                    <li class="text-2xl">Course Name</li>
+                    <li>Javascript</li>
+                    <li>PHP</li>
+                    <li>HTML</li>
+                    <li>grAPHIC</li>
+                  </ul>
+                  <ul
+                    class="flex flex-col gap-5 font-bold items-center justify-center"
+                  >
+                    <li class="text-2xl">Enrolled</li>
+                    <li>1100</li>
+                    <li>700</li>
+                    <li>1350</li>
+                    <li>1266</li>
+                  </ul>
+                  <ul
+                    class="flex flex-col mt-2 text-amber-600 gap-5 font-bold items-center justify-center"
+                  >
+                    <li class="text-2xl text-white">Rating</li>
+                    <li>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                    </li>
+                    <li>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                    </li>
+                    <li>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                    </li>
+                    <li>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                      <span class="material-symbols-outlined"> star </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- endedd -->
+          <!-- footer stard -->
+          <footer class="lg:h-screen h-[170vh] md:h-[140vh] bg-vNav">
+            <div
+              class="border-b border-b-butten pb-4 mx-auto w-[80%] lg:h-36 h-64 lg:flex lg:justify-between lg:flex-row flex-col px-5"
+            >
+              <img src="img/logo_2.png" class="h-20 w-44 my-10 mx-12 lg:mx-0" alt="" />
+              <div class="leading-36 h-36 relative -ml-12 lg:-ml-0 md:ml-14">
+                <input
+                  type="text"
+                  class=" h-12 w-64 border outline-0 rounded-sm border-r-0 text-gray-800 rounded-r-none rounded-rb-0 border-butten bg-white"
+                  placeholder="Enter your email here"
+                />
+                <p class="absolute top-0 lg:-right-30 md:right-36 -right-10 z-50">  Subscribe Now</p>
+                <button
+                  class="bg-violet-950 rounded-sm text-black rounded-l-none absolute h-12 w-32 top-12"
+                >
+                
+                </button>
+              </div>
+            </div>
+            <div class="flex lg:flex-row flex-col w-[90%] justify-center space-x-20 border-b border-b-butten pb-5 mx-auto mt-12">
+              <div class="flex flex-col gap-7 lg:w-[20%] w-full">
+                <h1 class="font-bold text-2xl">About Us</h1>
+                <p class="text-gray-400 font-bold">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A placeat
+                  ab quis saepe nesciunt consectetur in soluta tenetur autem adipisci.
+                  Molestiae voluptatum commodi iste, exercitationem non magnam odio.
+                  Architecto, quaerat?
+                </p>
+                <img src="img/Screenshot 2025-04-19 154216.png" class="h-16 mx-auto mb-4 w-48" alt="" />
+              </div>
+              <div>
+                <ul class="text-gray-500 flex flex-col gap-6 font-bold">
+                  <li>
+                    <a href="" class="font-bold text-2xl text-white">Usefull Link</a>
+                  </li>
+                  <li><a href="">About Us </a></li>
+                  <li><a href="">Teachers</a></li>
+                  <li><a href="">Partener</a></li>
+                  <li><a href="">Room-Detailes</a></li>
+                  <li><a href="">Gallery</a></li>
+                </ul>
+              </div>
+              <ul class="flex flex-col gap-7 font-bold text-gray-500">
+                <li><a href="" class="font-bold text-2xl text-white">Course</a></li>
+                <li><a href="">Ui Ux Desing</a></li>
+                <li><a href="">Web Development</a></li>
+                <li><a href="">Business Strategy</a></li>
+                <li><a href="">Softwere Development</a></li>
+                <li><a href="">Business English</a></li>
+              </ul>
+              <div class="flex gap-7 flex-col">
+                <h1 class="font-bold text-2xl">Resent Post</h1>
+                <div class="flex space-x-3">
+                  <img src="img/footer__1.png" alt="" />
+                  <div>
+                    <p class="text-gray-500">02 APr 2024</p>
+                    <h1 class="font-bold text-[18px]">Best your Business</h1>
+                  </div>
+                </div>
+                  <div class="flex space-x-3">
+                    <img src="img/footer__2.png" alt="" />
+                    <div>
+                      <p class="text-gray-500">02 APr 2024</p>
+                      <h1 class="font-bold text-[18px]">Best your Business</h1>
+                    </div>
+                  </div>
+                    <div class="flex space-x-3">
+                      <img src="img/footer__3.png" alt="" />
+                      <div>
+                        <p class="text-gray-500">02 APr 2024</p>
+                        <h1 class="font-bold text-[18px]">Best your Business</h1>
+                      </div>
+              
+             
+            </div>
+          </footer>
+          <!-- Footer ended -->
+      
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const sunIcon = document.getElementById("sunIcon");
+      const moonIcon = document.getElementById("moonIcon");
+      const html = document.documentElement;
+
+      function updateIcons(isDark) {
+        if (isDark) {
+          sunIcon.classList.remove("hidden");
+          moonIcon.classList.add("hidden");
+        } else {
+          sunIcon.classList.add("hidden");
+          moonIcon.classList.remove("hidden");
+        }
+      }
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        html.classList.add("dark");
+        updateIcons(true);
+      } else {
+        html.classList.remove("dark");
+        updateIcons(false);
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const isDark = html.classList.toggle("dark");
+        updateIcons(isDark);
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
+    </script>
+  </body>
+</html>
