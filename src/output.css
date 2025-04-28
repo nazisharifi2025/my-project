@@ -1913,6 +1913,9 @@
   .text-green-800 {
     color: var(--color-green-800);
   }
+  .text-navar1 {
+    color: var(--color-navar1);
+  }
   .text-pink-700 {
     color: var(--color-pink-700);
   }

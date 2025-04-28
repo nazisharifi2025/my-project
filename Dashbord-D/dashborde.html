@@ -234,10 +234,10 @@
       
           <!-- navar2 ended -->
           <div class="flex space-x-6 leading-20 py-3">
-            <span class="material-symbols-outlined mt-3 hover:cursor-pointer hover:text-pink-700 relative" style="font-size: 30px">
+            <span class="material-symbols-outlined group mt-3 hover:cursor-pointer hover:text-pink-700 relative" style="font-size: 30px">
               shopping_cart
             </span>
-            <div class="h-[90vh] w-[260px] bg-navar1 absolute top-32 right-40">
+            <div class="h-[90vh] w-[260px] bg-navar1 absolute top-32 right-40 hidden group-hover:block">
                 <div class="border-b border-violet-900">
                     <div class="flex space-x-2 mt-3">
                         <img src="img/cart1.jpg" class="h-[70px] w-[70px]" alt="">
@@ -266,7 +266,8 @@
                     <strong class="text-pink-700">$,100.00</strong>
                 </div>
                 <div>
-                    <button class="h-14 w-[90%] border-2 border-pink-700 text-center ml-3">Veio Cart</button>
+                    <div class="h-14 w-[90%] border-2 border-pink-700 text-center ml-3 font-bold leading-14">Veio Cart</div>
+                    <div class="h-14 w-[90%] border-2 bg-white mt-5 text-navar1 text-center ml-3 font-bold leading-14">Checkout</div>
                 </div>
             </div>
             <button id="menuToggle" class="md:block block lg:hidden">
