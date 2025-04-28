@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../src/output.css" />
-    <script src="app.js" defer></script>
+    <script src="fit.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
@@ -216,20 +216,53 @@
         </ul>
       <!--  -->
       <div class="flex space-x-6 leading-20 py-3">
-        <span class="material-symbols-outlined mt-3" style="font-size: 30px">
-          shopping_cart
-        </span>
+        <div class="group relative">
+          <span class="material-symbols-outlined mt-3 hover:cursor-pointer hover:text-pink-700" style="font-size: 30px">
+            shopping_cart
+          </span>
+      <div class="h-[90vh] w-[260px] bg-navar1 absolute top-14 -right-24 hidden group-hover:block">
+          <div class="border-b border-violet-900">
+              <div class="flex space-x-2 mt-3">
+                  <img src="img/cart1.jpg" class="h-[70px] w-[70px]" alt="">
+                  <div class="flex flex-col -mt-6">
+                  <h1 class="text-[20px] ">Web Dairectory</h1>
+                  <strong class="-mt-11">1x<span class="text-pink-700">$ 80.00</span></strong>
+              </div>
+              </div>
+              <div class="flex space-x-2 mt-3">
+                  <img src="img/cart2.jpg" class="h-[70px] w-[70px]" alt="">
+                  <div class="flex flex-col -mt-6">
+                  <h1 class="text-[20px] ">Web Dairectory</h1>
+                  <strong class="-mt-11">1x<span class="text-pink-700">$ 80.00</span></strong>
+              </div>
+              </div>
+              <div class="flex space-x-2 mt-3">
+                  <img src="img/cart3.jpg" class="h-[70px] w-[70px]" alt="">
+                  <div class="flex flex-col -mt-6">
+                  <h1 class="text-[20px] ">Web Dairectory</h1>
+                  <strong class="-mt-11">1x<span class="text-pink-700">$ 80.00</span></strong>
+              </div>
+              </div>
+          </div>
+          <div class="flex justify-between px-2">
+          </div>
+          <div class="my-6">
+              <div class="h-14 w-[90%] border-2 border-pink-700 text-center ml-3 font-bold leading-14">Veio Cart</div>
+              <div class="h-14 w-[90%] border-2 bg-white mt-5 text-navar1 text-center ml-3 font-bold leading-14">Checkout</div>
+          </div>
+      </div>
+  </div>
         <button id="menuToggle" class="md:block block lg:hidden">
           <span class="material-symbols-outlined text-white text-3xl">menu</span>
         </button>
-        <span
-          class="material-symbols-outlined border rounded-[6px] w-12 text-center pt-2 h-12 md:hidden hidden lg:block"
+      <a href="sighnup.html"><span
+          class="material-symbols-outlined border rounded-[6px] w-12 text-center pt-2 h-12 md:hidden hidden lg:block hover:bg-indigo-950 hover:border hover:border-violet-900"
           style="font-size: 30px"
         >
           person
-        </span>
+        </span></a>  
         <button
-          class="h-12 w-28 rounded-[6px] bg-violet-950 text-center text-[18px] leading-4 hidden md:hidden lg:block"
+          class="h-12 w-28 rounded-[6px] bg-violet-950 text-center text-[18px] leading-4 hidden md:hidden lg:block hover:bg-indigo-950 hover:border hover: border-violet-900"
         >
           Get Start
         </button>
@@ -342,32 +375,32 @@
          <div id="hBz" class="h-20 w-full bg-vNav border-2 border-violet-900 mt-9  px-6">
           <div id="clickme" class="hover:h-14 hover:w-full hover:border-2 rounded-2xl rounded-b-none hover:border-violet-900 flex 
           hover:text-center hover:mx-auto justify-between hover:mt-3 hover:leading-20">
-          <h1 class="font-bold text-2xl ml-9 pt-3">Additional Information</h1>
+          <h1 class="font-bold lg:text-2xl md:text-2xl text-[16px] ml-9 pt-3">Additional Information</h1>
           <span class="material-symbols-outlined mt-1.5 text-gray-600" style="font-size: 50px;">
             keyboard_arrow_down
             </span>
           </div>
           <div id="opicite" class="opacity-0 duration-500">
-            <div class=" flex justify-between">
+            <div class=" flex lg:justify-between lg:flex-row flex-col ">
             <div class="flex flex-col gap-3">
               <h1 class="ml-9">Start Date</h1>
-              <input type="date" placeholder="mm/dd/yyyy" class="w-[45vh] h-12 border
+              <input type="date" placeholder="mm/dd/yyyy" class="lg:w-[45vh] md:w-[45vh] w-[90%] h-12 border
                border-violet-900 rounded-[7px] mx-7">
             </div>
           <div class="flex flex-col gap-3">
             <h1 class="ml-9">Languige</h1>
-            <input type="text" placeholder="English" class="w-[45vh] h-12 border
+            <input type="text" placeholder="English" class="lg:w-[45vh] md:w-[45vh] w-[90%]  h-12 border
              border-violet-900 rounded-[7px] mx-7">
           </div>
         </div>
-        <div class="flex justify-between space-x-2 w-full mt-3">
-          <div class="w-[50%]">
+        <div class="flex justify-between lg:flex-col md:flex-row flex-col space-x-2 w-full mt-3">
+          <div class="lg:w-[50%] md:w-[50%] w-full">
             <h1 class="ml-9">Requirements</h1>
           <textarea name="name" id="" class="lg:h-[50vh]  h-[30vh] rounded-[7px] w-full
             border border-violet-900 outline-0" placeholder="Add your course benefits here."
             ></textarea>
         </div>
-        <div class="w-[50%]">
+        <div class="lg:w-[50%] md:w-[50%] w-full">
           <h1 class="ml-9">Requirements</h1>
         <textarea name="name" id="" class="lg:h-[50vh] h-[30vh] rounded-[7px] w-full
           border border-violet-900 outline-0" placeholder="Add your course benefits here."></textarea>
@@ -525,5 +558,37 @@
     </footer>
 
     <!-- Footer ended -->
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const sunIcon = document.getElementById("sunIcon");
+      const moonIcon = document.getElementById("moonIcon");
+      const html = document.documentElement;
+
+      function updateIcons(isDark) {
+        if (isDark) {
+          sunIcon.classList.remove("hidden");
+          moonIcon.classList.add("hidden");
+        } else {
+          sunIcon.classList.add("hidden");
+          moonIcon.classList.remove("hidden");
+        }
+      }
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        html.classList.add("dark");
+        updateIcons(true);
+      } else {
+        html.classList.remove("dark");
+        updateIcons(false);
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const isDark = html.classList.toggle("dark");
+        updateIcons(isDark);
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
+    </script>
+
   </body>
 </html>

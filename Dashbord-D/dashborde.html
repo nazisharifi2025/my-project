@@ -57,7 +57,7 @@
       <!-- ended nav1 -->
       <div class="lg:h-20 w-full bg-navar1 lg:px-2 md:px-9 lg:leading-20 lg:space-x-9 flex justify-between">
         <!-- responsiv ended -->
-          <img src="img/logo_1.png" class="w-56 leading-20 my-3 h-12" alt="" />
+          <img src="img/logo_1.png" class="lg:w-56 leading-20 my-3 lg:h-12 h-10 w-36" alt="" />
           <ul  id="mobileMenu" class="hidden lg:space-x-6 space-x-3 flex-col gap-9  lg:flex lg:gap-0 lg:flex-row md:flex-col absolute top-24 right-0 lg:relative md:absolute lg:top-0 lg:right-16  h-screen  lg:h-20 lg:w-[30%] w-[50%] z-50 bg-navar1">
             <button id="menuClose" class="text-left lg:hidden block md:block">
               <span class="material-symbols-outlined text-white text-2xl">close</span>
@@ -234,10 +234,11 @@
       
           <!-- navar2 ended -->
           <div class="flex space-x-6 leading-20 py-3">
-            <span class="material-symbols-outlined group mt-3 hover:cursor-pointer hover:text-pink-700 relative" style="font-size: 30px">
-              shopping_cart
-            </span>
-            <div class="h-[90vh] w-[260px] bg-navar1 absolute top-32 right-40 hidden group-hover:block">
+            <div class="group relative">
+                <span class="material-symbols-outlined mt-3 hover:cursor-pointer hover:text-pink-700" style="font-size: 30px">
+                  shopping_cart
+                </span>
+            <div class="h-[90vh] w-[260px] bg-navar1 absolute top-14 -right-24 hidden group-hover:block">
                 <div class="border-b border-violet-900">
                     <div class="flex space-x-2 mt-3">
                         <img src="img/cart1.jpg" class="h-[70px] w-[70px]" alt="">
@@ -270,10 +271,11 @@
                     <div class="h-14 w-[90%] border-2 bg-white mt-5 text-navar1 text-center ml-3 font-bold leading-14">Checkout</div>
                 </div>
             </div>
+        </div>
             <button id="menuToggle" class="md:block block lg:hidden">
               <span class="material-symbols-outlined text-white text-3xl">menu</span>
             </button>
-           <a href="person.html"><span
+           <a href="sighnup.html"><span
               class="material-symbols-outlined border rounded-[6px] w-12 text-center pt-2 h-12 md:hidden hidden lg:block hover:bg-violet-700"
               style="font-size: 30px"
             >
