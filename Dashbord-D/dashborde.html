@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="../src/output.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js" defer></script>
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -85,7 +86,7 @@
                 stat_minus_1
               </span> </a>
               <div class="hidden group-hover:hidden lg:group-hover:block">
-                <ul class="bg-navar1 w-[900px] absolute top-18 left-0 h-[90vh] rounded-b-lg">
+                <ul class="bg-navar1 w-[900px] absolute top-18 -left-72 h-[90vh] rounded-b-lg">
                   <table class="mr-14">
                     <tr>
                       <th class="w-[20%] mx-14 border-b border-b-butten text-center">Set Started1</th>
@@ -143,7 +144,7 @@
               </span></a>
             <div class="hidden group-hover:hidden lg:group-hover:block">
               <div class="flex space-x-2">
-              <ul class="bg-navar1 w-[1000px] absolute top-18 -left-72 h-[110vh] rounded-b-lg">
+              <ul class="bg-navar1 w-[1000px] absolute top-18 -left-96 h-[110vh] rounded-b-lg">
                 <table class="flex mx-12">
                   <tr>
                     <th class="w-[30%] mx-14 border-b border-b-butten text-center">Set Started1</th>
@@ -233,9 +234,41 @@
       
           <!-- navar2 ended -->
           <div class="flex space-x-6 leading-20 py-3">
-            <span class="material-symbols-outlined mt-3 hover:cursor-pointer hover:text-pink-700" style="font-size: 30px">
+            <span class="material-symbols-outlined mt-3 hover:cursor-pointer hover:text-pink-700 relative" style="font-size: 30px">
               shopping_cart
             </span>
+            <div class="h-[90vh] w-[260px] bg-navar1 absolute top-32 right-40">
+                <div class="border-b border-violet-900">
+                    <div class="flex space-x-2 mt-3">
+                        <img src="img/cart1.jpg" class="h-[70px] w-[70px]" alt="">
+                        <div class="flex flex-col -mt-6">
+                        <h1 class="text-[20px] ">Web Dairectory</h1>
+                        <strong class="-mt-11">1x<span class="text-pink-700">$ 80.00</span></strong>
+                    </div>
+                    </div>
+                    <div class="flex space-x-2 mt-3">
+                        <img src="img/cart2.jpg" class="h-[70px] w-[70px]" alt="">
+                        <div class="flex flex-col -mt-6">
+                        <h1 class="text-[20px] ">Web Dairectory</h1>
+                        <strong class="-mt-11">1x<span class="text-pink-700">$ 80.00</span></strong>
+                    </div>
+                    </div>
+                    <div class="flex space-x-2 mt-3">
+                        <img src="img/cart3.jpg" class="h-[70px] w-[70px]" alt="">
+                        <div class="flex flex-col -mt-6">
+                        <h1 class="text-[20px] ">Web Dairectory</h1>
+                        <strong class="-mt-11">1x<span class="text-pink-700">$ 80.00</span></strong>
+                    </div>
+                    </div>
+                </div>
+                <div class="flex justify-between px-2">
+                    <strong>Total:</strong>
+                    <strong class="text-pink-700">$,100.00</strong>
+                </div>
+                <div>
+                    <button class="h-14 w-[90%] border-2 border-pink-700 text-center ml-3">Veio Cart</button>
+                </div>
+            </div>
             <button id="menuToggle" class="md:block block lg:hidden">
               <span class="material-symbols-outlined text-white text-3xl">menu</span>
             </button>
@@ -280,7 +313,7 @@
               <span class="-mt-56">4.0 (120 Reviews)</span>
             </div>
             <button
-              class="text-2xl h-14 lg:my-20 my-0 md:mx-auto ml-7 lg:ml-0 rounded-[8px] w-72 bg-violet-900 hover:bg-nav2"
+              class="text-2xl h-14 lg:my-20 my-0 md:mx-auto ml-7 lg:ml-0 rounded-[8px] w-72 bg-violet-900 hover:bg-indigo-950 hover:border hover:border-violet-800"
             >
               <a href="dashbordejs.html">Creat a New Course</a>
               <span class="material-symbols-outlined"> arrow_forward </span>
