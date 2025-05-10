@@ -1,70 +1,91 @@
 <!DOCTYPE html>
 <html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <title>اسکرول انیمیشن</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .animate-fade-up-init {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s ease-out;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>اسکرول انیمیشن</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .animate-fade-up-init {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease-out;
+      }
 
-    .animate-fade-up-show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-</head>
-<body class="bg-gray-100 min-h-screen flex flex-col gap-32 items-center justify-center p-10">
-    <div class="scroll-animate flex justify-between items-center border-black
-    animate-fade-up-init bg-white p-6 rounded shadow w-1/2 text-center text-xl 
-    border-8 h-72 mx-auto text-black font-bold">
-     <h1 class="font-bold text-6xl">New Model</h1>
-     <img src="img/images.jpg" class="float-right h-52 w-52" alt="">
-   </div>
-   <div class="scroll-animate flex justify-between items-center border-black
-   animate-fade-up-init bg-white p-6 rounded shadow w-1/2 text-center text-xl 
-   border-8 h-72 mx-auto text-black font-bold">
-    <h1 class="font-bold text-6xl">New Model</h1>
-    <img src="img/images.jpg" class="float-right h-52 w-52" alt="">
-  </div>
-  
-  <div class="scroll-animate flex justify-between items-center border-black
-  animate-fade-up-init bg-white p-6 rounded shadow w-1/2 text-center text-xl 
-  border-8 h-72 mx-auto text-black font-bold">
-   <h1 class="font-bold text-6xl">New Model</h1>
-   <img src="img/images.jpg" class="float-right h-52 w-52" alt="">
- </div>
- 
- <div class="scroll-animate flex justify-between items-center border-black
- animate-fade-up-init bg-white p-6 rounded shadow w-1/2 text-center text-xl 
- border-8 h-72 mx-auto text-black font-bold">
-  <h1 class="font-bold text-6xl">New Model</h1>
-  <img src="img/images.jpg" class="float-right h-52 w-52" alt="">
-</div>
+      .animate-fade-up-show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-100 min-h-screen flex flex-col gap-32 items-center justify-center p-10"
+  >
+    <div
+      class="scroll-animate flex justify-between items-center border-black animate-fade-up-init bg-white p-6 rounded shadow w-1/2 text-center text-xl border-8 h-72 mx-auto text-black font-bold"
+    >
+      <h1 class="font-bold text-6xl">New Model</h1>
+      <img src="img/images.jpg" class="float-right h-52 w-52" alt="" />
+    </div>
+    <div
+      class="scroll-animate flex justify-between items-center border-black animate-fade-up-init bg-white p-6 rounded shadow w-1/2 text-center text-xl border-8 h-72 mx-auto text-black font-bold"
+    >
+      <h1 class="font-bold text-6xl">New Model</h1>
+      <img src="img/images.jpg" class="float-right h-52 w-52" alt="" />
+    </div>
 
-<div class="scroll-animate flex justify-between items-center border-black
-animate-fade-up-init bg-white p-6 rounded shadow w-1/2 text-center text-xl 
-border-8 h-72 mx-auto text-black font-bold">
- <h1 class="font-bold text-6xl">New Model</h1>
- <img src="img/images.jpg" class="float-right h-52 w-52" alt="">
-</div>
+    <div
+      class="scroll-animate flex justify-between items-center border-black animate-fade-up-init bg-white p-6 rounded shadow w-1/2 text-center text-xl border-8 h-72 mx-auto text-black font-bold"
+    >
+      <h1 class="font-bold text-6xl">New Model</h1>
+      <img src="img/images.jpg" class="float-right h-52 w-52" alt="" />
+    </div>
 
-  <script>
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-up-show');
-          observer.unobserve(entry.target); // فقط یک‌بار اجرا بشه
+    <div
+      class="scroll-animate flex justify-between items-center border-black animate-fade-up-init bg-white p-6 rounded shadow w-1/2 text-center text-xl border-8 h-72 mx-auto text-black font-bold"
+    >
+      <h1 class="font-bold text-6xl">New Model</h1>
+      <img src="img/images.jpg" class="float-right h-52 w-52" alt="" />
+    </div>
+
+    <div
+      class="scroll-animate flex justify-between items-center border-black animate-fade-up-init bg-white p-6 rounded shadow w-1/2 text-center text-xl border-8 h-72 mx-auto text-black font-bold"
+    >
+      <h1 class="font-bold text-6xl">New Model</h1>
+      <img src="img/images.jpg" class="float-right h-52 w-52" alt="" />
+    </div>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-fade-up-show");
+            } else {
+              entry.target.classList.remove("animate-fade-up-show"); // اختیاری: وقتی از دید خارج شد حذف کن
+            }
+          });
+        },
+        {
+          threshold: 0.3,
         }
-      });
-    }, {
-      threshold: 0.3
-    });
+      );
 
-    document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
-  </script>
-</body>
+      document
+        .querySelectorAll(".scroll-animate")
+        .forEach((el) => observer.observe(el));
+
+      // const observer = new IntersectionObserver((entries, observer) => {
+      // entries.forEach(entry => {
+      // if (entry.isIntersecting) {
+      // entry.target.classList.add('animate-fade-up-show');
+      // observer.unobserve(entry.target); // فقط یک‌بار اجرا بشه
+      // }
+      // });
+      // }, {
+      // threshold: 0.3
+      // });
+      //
+      // document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+    </script>
+  </body>
 </html>

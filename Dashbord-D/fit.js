@@ -31,6 +31,26 @@ const observer = new IntersectionObserver(
   }
 );
 Counters.forEach((counter) => observer.observe(counter));
+// Mobiel responsiv
+const menuToggle = document.getElementById("menuToggle");
+const menuClose = document.getElementById("menuClose");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.remove("hidden");
+  mobileMenu.classList.add("flex");
+});
+
+menuClose.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+  mobileMenu.classList.remove("flex");
+});
+
+document.getElementById("divOne").addEventListener("click", function () {
+  const targetDiv = document.getElementById("div1");
+  targetDiv.classList.toggle("hidden"); // نمایش یا مخفی کردن بر اساس وضعیت فعلی
+});
+
 // dashbord3
 const box = document.getElementById("expandBox");
 const content = document.getElementById("innerContent");
@@ -154,21 +174,3 @@ clicktome.addEventListener("click", () => {
 // localStorage.setItem("theme", isDark ? "dark" : "light");
 // });
 // click
-const menuToggle = document.getElementById("menuToggle");
-const menuClose = document.getElementById("menuClose");
-const mobileMenu = document.getElementById("mobileMenu");
-
-menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.remove("hidden");
-  mobileMenu.classList.add("flex");
-});
-
-menuClose.addEventListener("click", () => {
-  mobileMenu.classList.add("hidden");
-  mobileMenu.classList.remove("flex");
-});
-
-document.getElementById("divOne").addEventListener("click", function () {
-  const targetDiv = document.getElementById("div1");
-  targetDiv.classList.toggle("hidden"); // نمایش یا مخفی کردن بر اساس وضعیت فعلی
-});
