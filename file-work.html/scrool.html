@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>اسکرول انیمیشن</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/output.css" />
     <style>
       .animate-fade-up-init {
         opacity: 0;
@@ -55,36 +55,13 @@
     </div>
 
     <script>
-      const observer = new IntersectionObserver(
-        (entres) => {
-          entres.forEach((entre) => {
-            if (entre.isIntersecting) {
-              entre.target.classList.add("animate-fade-up-init");
-            } else {
-              entre.target.classList.remove("animate-fade-up-init");
-            }
-          });
-        },
-        {
-          threshold: 0.3,
-        }
-      );
-      document
-        .querySelectorAll(".scroll-animate")
-        .forEach((el) => observer.observe(el));
-      // const item = document.querySelectorAll(".scroll-animate");
-      // item.forEach((item) => observer.observe(item));
-      // for (let i = 0; i < item.length; i++) {
-      // observer.observe(item[i]);
-      // }
-
       // const observer = new IntersectionObserver(
-      // (entries) => {
-      // entries.forEach((entry) => {
-      // if (entry.isIntersecting) {
-      // entry.target.classList.add("animate-fade-up-show");
+      // (entres) => {
+      // entres.forEach((entre) => {
+      // if (entre.isIntersecting) {
+      // entre.target.classList.add("animate-fade-up-init");
       // } else {
-      // entry.target.classList.remove("animate-fade-up-show"); // اختیاری: وقتی از دید خارج شد حذف کن
+      // entre.target.classList.remove("animate-fade-up-init");
       // }
       // });
       // },
@@ -92,11 +69,31 @@
       // threshold: 0.3,
       // }
       // );
-      //
-      // document
-      // .querySelectorAll(".scroll-animate")
-      // .forEach((el) => observer.observe(el));
-      //
+      // const item = document.querySelectorAll(".scroll-animate");
+      // item.forEach((item) => observer.observe(item));
+      // for (let i = 0; i < item.length; i++) {
+      // observer.observe(item[i]);
+      // }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-fade-up-show");
+            } else {
+              entry.target.classList.remove("animate-fade-up-show"); // اختیاری: وقتی از دید خارج شد حذف کن
+            }
+          });
+        },
+        {
+          threshold: 0.3,
+        }
+      );
+
+      document
+        .querySelectorAll(".scroll-animate")
+        .forEach((el) => observer.observe(el));
+
       // const observer = new IntersectionObserver((entries, observer) => {
       // entries.forEach(entry => {
       // if (entry.isIntersecting) {
